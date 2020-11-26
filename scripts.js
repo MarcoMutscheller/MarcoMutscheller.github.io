@@ -1,7 +1,7 @@
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 
-const sounds = ["11 fan.wav", '12 fan.wav', '13 fan.wav', '21 fan.wav', '22 fan.wav', '23 fan.wav', '31 fan.wav', '32 fan.wav', '33 fan.wav', '11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav'];
+const sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav', '11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav'];
 const levels = [0, 0, -3, -10];
 const loops = [];
 const activeLoops = new Set();
