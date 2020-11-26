@@ -129,6 +129,3 @@ div.button[data-index="17"] {
 div.button.active {
   opacity: 1;
 }
-div.button:hover {
-  background-color: rgba(4, 43, 0, 0.356);
-}
