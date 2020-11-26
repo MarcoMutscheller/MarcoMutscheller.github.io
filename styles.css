@@ -1,0 +1,134 @@
+body {  
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+}
+
+h1{
+
+  text-align: center;
+}
+h2{
+
+  text-align: left;
+}
+
+#buttons {
+  position: absolute;
+  top: 50%;
+  left: 55%;
+}
+
+div.button {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  
+  opacity: 0.75;
+  
+}
+
+div.button[data-index="0"] {
+  top: -150px;
+  left: -200px;
+  background-color: green;
+}
+div.button[data-index="1"] {
+  top: -150px;
+  left: -99px;
+  background-color: green;
+}
+
+div.button[data-index="2"] {
+  top: -150px;
+  left: 2px;
+  background-color: rgb(3, 126, 3);
+}
+div.button[data-index="3"] {
+  top: -49px;
+  left: -200px;
+  background-color: rgb(9, 78, 0);
+}
+
+div.button[data-index="4"] {
+  top: -49px;
+  left: -99px;
+  background-color: rgb(9, 78, 0);
+}
+div.button[data-index="5"] {
+  top: -49px;
+  left: 2px;
+  background-color: rgb(9, 78, 0);
+}
+
+div.button[data-index="6"] {
+  top: 51px;
+  left: -200px;
+  background-color: rgb(4, 32, 0);
+}
+div.button[data-index="7"] {
+  top: 51px;
+  left: -99px;
+  background-color: rgb(4, 32, 0);
+}
+div.button[data-index="8"] {
+  top: 51px;
+  left: 2px;
+  background-color: rgb(4, 32, 0);
+}
+
+div.button[data-index="9"] {
+  top: -150px;
+  left: -800px;
+  background-color: rgb(150, 0, 0);
+}
+div.button[data-index="10"] {
+  top: -150px;
+  left: -699px;
+  background-color: rgb(151, 0, 0);
+}
+
+div.button[data-index="11"] {
+  top: -150px;
+  left: -598px;
+  background-color: rgb(151, 0, 0);
+}
+div.button[data-index="12"] {
+  top: -49px;
+  left: -800px;
+  background-color: rgb(87, 0, 0);
+}
+
+div.button[data-index="13"] {
+  top: -49px;
+  left: -699px;
+  background-color: rgb(88, 0, 0);
+}
+div.button[data-index="14"] {
+  top: -49px;
+  left: -598px;
+  background-color: rgb(82, 0, 0);
+}
+
+div.button[data-index="15"] {
+  top: 51px;
+  left: -800px;
+  background-color: rgb(68, 0, 0);
+}
+div.button[data-index="16"] {
+  top: 51px;
+  left: -699px;
+  background-color: rgb(68, 0, 0);
+}
+div.button[data-index="17"] {
+  top: 51px;
+  left: -598px;
+  background-color: rgb(70, 0, 0);
+}
+div.button.active {
+  opacity: 1;
+}
+div.button:hover {
+  background-color: rgba(4, 43, 0, 0.356);
+}
