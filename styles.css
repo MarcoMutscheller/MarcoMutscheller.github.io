@@ -135,50 +135,50 @@ div.button.active {
 div.button[data-index="18"] {
   top: -150px;
   left: 800px;
-  background-color: rgb(150, 0, 0);
+  background-color: rgb(0, 150, 0);
 }
 div.button[data-index="19"] {
   top: -150px;
   left: 699px;
-  background-color: rgb(151, 0, 0);
+ background-color: rgb(0, 150, 5);
 }
 
 div.button[data-index="20"] {
   top: -150px;
   left: 598px;
-  background-color: rgb(151, 0, 0);
+  background-color: rgb(0, 150, 10);
 }
 div.button[data-index="21"] {
   top: -49px;
   left: 800px;
-  background-color: rgb(87, 0, 0);
+ background-color: rgb(0, 150, 20);
 }
 
 div.button[data-index="22"] {
   top: -49px;
   left: 699px;
-  background-color: rgb(88, 0, 0);
+  background-color: rgb(0, 150, 30);
 }
 div.button[data-index="23"] {
   top: -49px;
   left: 598px;
-  background-color: rgb(82, 0, 0);
+ background-color: rgb(0, 150, 40);
 }
 
 div.button[data-index="24"] {
   top: 51px;
   left: 800px;
-  background-color: rgb(68, 0, 0);
+  background-color: rgb(0, 150, 50);
 }
 div.button[data-index="25"] {
   top: 51px;
   left: 699px;
-  background-color: rgb(68, 0, 0);
+  background-color: rgb(0, 150, 60);
 }
 div.button[data-index="26"] {
   top: 51px;
   left: 598px;
-  background-color: rgb(70, 0, 0);
+  background-color: rgb(0, 150, 70);
 }
 div.button.active {
   opacity: 1;
