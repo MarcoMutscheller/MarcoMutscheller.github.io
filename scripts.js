@@ -158,4 +158,11 @@ function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
 
-
+function myFunction() {
+  var x = document.getElementById("myDIV");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
