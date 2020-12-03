@@ -178,6 +178,12 @@ window.addEventListener('touchstart', onButton);
 loadLoops();
 
 /***************************************************************************/
+function show(id) {
+    if(document.getElementById) {
+        var buttoninter = document.getElementById(id);
+        buttoninter.style.display = (buttoninter.style.display=='block'?'none':'block');
+    }
+}
 
 class Loop {
   constructor(buffer, button, level = 0) {
@@ -327,11 +333,6 @@ function decibelToLinear(val) {
 /*****************************************************************************************************/
 
 
-function show(id) {
-    if(document.getElementById) {
-        var buttoninter = document.getElementById(id);
-        buttoninter.style.display = (buttoninter.style.display=='block'?'none':'block');
-    }
-}
+
 
 
