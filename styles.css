@@ -134,50 +134,50 @@ div.button.active {
 
 div.button[data-index="18"] {
   top: -150px;
-  left: 600px;
+  left: 300px;
   background-color: rgb(0, 0, 150);
 }
 div.button[data-index="19"] {
   top: -150px;
-  left: 701px;
+  left: 401px;
   background-color: rgb(0, 0, 150);
 }
 
 div.button[data-index="20"] {
   top: -150px;
-  left: 802px;
+  left: 502px;
    background-color: rgb(0, 0, 150);
 }
 div.button[data-index="21"] {
   top: -49px;
-  left: 600px;
+  left: 300px;
  background-color: rgb(0, 0, 100);
 }
 
 div.button[data-index="22"] {
   top: -49px;
-  left: 701px;
+  left: 401px;
    background-color: rgb(0, 0, 100);
 }
 div.button[data-index="23"] {
   top: -49px;
-  left: 802px;
+  left: 502px;
   background-color: rgb(0, 0, 100);
 }
 
 div.button[data-index="24"] {
   top: 49px;
-  left: 600px;
+  left: 300px;
    background-color: rgb(0, 0, 50);
 }
 div.button[data-index="25"] {
   top: 49px;
-  left: 701px;
+  left: 401px;
    background-color: rgb(0, 0, 50);
 }
 div.button[data-index="26"] {
   top: 49px;
-  left: 802px;
+  left: 502px;
    background-color: rgb(0, 0, 50);
 }
 div.button.active {
