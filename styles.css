@@ -185,7 +185,7 @@ div.button.active {
 }
 
 /****************************************************/
-.buttoncss{
+#buttoncss{
 top: -49px;
   left: 401px;
      background-color: white; 
@@ -201,7 +201,7 @@ top: -49px;
   cursor: pointer;
 }
 
-.buttoncss:hover {
+#buttoncss:hover {
   background-color: #4CAF50;
   color: white;
 }
