@@ -161,8 +161,8 @@ function decibelToLinear(val) {
 /***************************************************************************/
 function show(id) {
     if(document.getElementById) {
-        var button = document.getElementById(id);
-        button.style.display = (button.style.display=='block'?'none':'block');
+        var interactbutton = document.getElementById(id);
+        interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
     }
 }
 
