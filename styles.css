@@ -132,54 +132,76 @@ div.button.active {
 
 
 
-div.button[data-index="18"] {
+div.buttoninter[data-index="18"] {
   top: -150px;
   left: 300px;
   background-color: rgb(0, 0, 150);
 }
-div.button[data-index="19"] {
+div.buttoninter[data-index="19"] {
   top: -150px;
   left: 401px;
   background-color: rgb(0, 0, 150);
 }
 
-div.button[data-index="20"] {
+div.buttoninter[data-index="20"] {
   top: -150px;
   left: 502px;
    background-color: rgb(0, 0, 150);
 }
-div.button[data-index="21"] {
+div.buttoninter[data-index="21"] {
   top: -49px;
   left: 300px;
  background-color: rgb(0, 0, 100);
 }
 
-div.button[data-index="22"] {
+div.buttoninter[data-index="22"] {
   top: -49px;
   left: 401px;
    background-color: rgb(0, 0, 100);
 }
-div.button[data-index="23"] {
+div.buttoninter[data-index="23"] {
   top: -49px;
   left: 502px;
   background-color: rgb(0, 0, 100);
 }
 
-div.button[data-index="24"] {
+div.buttoninter[data-index="24"] {
   top: 49px;
   left: 300px;
    background-color: rgb(0, 0, 50);
 }
-div.button[data-index="25"] {
+div.buttoninter[data-index="25"] {
   top: 49px;
   left: 401px;
    background-color: rgb(0, 0, 50);
 }
-div.button[data-index="26"] {
+div.buttoninter[data-index="26"] {
   top: 49px;
   left: 502px;
    background-color: rgb(0, 0, 50);
 }
 div.button.active {
   opacity: 1;
+}
+
+/****************************************************/
+.buttoninteractionsolo{
+top: -49px;
+  left: 401px;
+     background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.buttoninteractionsolo:hover {
+  background-color: #4CAF50;
+  color: white;
 }
