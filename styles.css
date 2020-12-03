@@ -132,50 +132,50 @@ div.button.active {
 
 
 
-div.buttoninter[data-index="18"] {
+div.button[data-index="18"] {
   top: -150px;
   left: 300px;
   background-color: rgb(0, 0, 150);
 }
-div.buttoninter[data-index="19"] {
+div.button[data-index="19"] {
   top: -150px;
   left: 401px;
   background-color: rgb(0, 0, 150);
 }
 
-div.buttoninter[data-index="20"] {
+div.button[data-index="20"] {
   top: -150px;
   left: 502px;
    background-color: rgb(0, 0, 150);
 }
-div.buttoninter[data-index="21"] {
+div.button[data-index="21"] {
   top: -49px;
   left: 300px;
  background-color: rgb(0, 0, 100);
 }
 
-div.buttoninter[data-index="22"] {
+div.button[data-index="22"] {
   top: -49px;
   left: 401px;
    background-color: rgb(0, 0, 100);
 }
-div.buttoninter[data-index="23"] {
+div.button[data-index="23"] {
   top: -49px;
   left: 502px;
   background-color: rgb(0, 0, 100);
 }
 
-div.buttoninter[data-index="24"] {
+div.button[data-index="24"] {
   top: 49px;
   left: 300px;
    background-color: rgb(0, 0, 50);
 }
-div.buttoninter[data-index="25"] {
+div.button[data-index="25"] {
   top: 49px;
   left: 401px;
    background-color: rgb(0, 0, 50);
 }
-div.buttoninter[data-index="26"] {
+div.button[data-index="26"] {
   top: 49px;
   left: 502px;
    background-color: rgb(0, 0, 50);
