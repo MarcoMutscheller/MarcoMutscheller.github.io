@@ -158,4 +158,10 @@ function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
 
-
+$(document).ready(function(){
+  $("buttoninteract").click(function(){
+    $("<div class="button" data-index="18"></div>").fadeIn();
+    $("#div2").fadeIn("slow");
+    $("#div3").fadeIn(3000);
+  });
+});
