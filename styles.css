@@ -139,13 +139,13 @@ div.button[data-index="18"] {
 }
 div.button[data-index="19"] {
   top: -150px;
-  left: 499px;
+  left: 701px;
   background-color: rgb(0, 0, 150);
 }
 
 div.button[data-index="20"] {
   top: -150px;
-  left: 298px;
+  left: 802px;
    background-color: rgb(0, 0, 150);
 }
 div.button[data-index="21"] {
@@ -156,12 +156,12 @@ div.button[data-index="21"] {
 
 div.button[data-index="22"] {
   top: -49px;
-  left: 499px;
+  left: 701px;
    background-color: rgb(0, 0, 100);
 }
 div.button[data-index="23"] {
   top: -49px;
-  left: 298px;
+  left: 802px;
   background-color: rgb(0, 0, 100);
 }
 
@@ -172,12 +172,12 @@ div.button[data-index="24"] {
 }
 div.button[data-index="25"] {
   top: 49px;
-  left: 499px;
+  left: 701px;
    background-color: rgb(0, 0, 50);
 }
 div.button[data-index="26"] {
   top: 49px;
-  left: 298px;
+  left: 802px;
    background-color: rgb(0, 0, 50);
 }
 div.button.active {
