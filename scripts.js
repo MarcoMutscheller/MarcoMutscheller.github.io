@@ -160,7 +160,7 @@ function decibelToLinear(val) {
 
 function show(id) {
     if(document.getElementById) {
-        var mydiv = document.getElementById(id);
-        mydiv.style.display = (mydiv.style.display=='block'?'none':'block');
+        var buttoninter = document.getElementById(id);
+        buttoninter.style.display = (buttoninter.style.display=='block'?'none':'block');
     }
 }
