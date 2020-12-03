@@ -159,7 +159,7 @@ function decibelToLinear(val) {
 }
 
 $(document).ready(function(){
-  $("buttoninteract").click(function(){
+  $("button").click(function(){
     $("<div class="button" data-index="18"></div>").fadeIn();
     $("#div2").fadeIn("slow");
     $("#div3").fadeIn(3000);
