@@ -178,7 +178,7 @@ function fadeOut(el){
 }
 
 var btn = document.getElementById('btnFade'),
-    img = document.getElementById('imgFade');
+    img = document.getElementById('erscheine');
 
 btn.addEventListener('click', function(){
   if (img.className.indexOf('hide') !== -1) {
