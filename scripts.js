@@ -167,7 +167,7 @@ function show(id) {
 }
 
 /*****************************Move Button*******************************************/
-$(document.body).ready(function(){
+$(document).ready(function(){
     animateDiv();
     
 });
