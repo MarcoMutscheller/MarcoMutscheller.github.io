@@ -167,7 +167,7 @@ function show(id) {
 }
 
 /*****************************Move Button*******************************************/
-$doc->addScript('http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js');
+
 $(document).ready(function(){
     animateDiv();
     
