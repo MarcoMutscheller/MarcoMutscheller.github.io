@@ -191,17 +191,17 @@ div.button[data-index="27"] {
 
 div.button[data-index="28"] {
   top: 251px;
-  left: -400px;
+  left: -300px;
    background-color: rgb(4, 32, 0);
 }
 div.button[data-index="29"] {
   top: 351px;
-  left: -500px;
+  left: -300px;
    background-color: rgb(4, 32, 0);
 }
 div.button[data-index="30"] {
   top: 451px;
-  left: -400px;
+  left: -300px;
    background-color: rgb(4, 32, 0);
 }
 div.button[data-index="31"] {
@@ -211,22 +211,22 @@ div.button[data-index="31"] {
 }
 div.button[data-index="32"] {
   top: 651px;
-  left: -200px;
+  left: -300px;
    background-color: rgb(4, 32, 0);
 }
 div.button[data-index="33"] {
-  top: 151px;
-  left: 502px;
+  top: 751px;
+  left: -300px;
    background-color: rgb(4, 32, 0);
 }
 div.button[data-index="34"] {
-  top: 151px;
-  left: 502px;
+  top: 851px;
+  left: -300px;
    background-color: rgb(4, 32, 0);
 }
 div.button[data-index="35"] {
-  top: 151px;
-  left: 502px;
+  top: 951px;
+  left: -300px;
    background-color: rgb(4, 32, 0);
 }
 div.button.active {
