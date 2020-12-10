@@ -165,31 +165,15 @@ function show(id) {
         interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
     }
 }
-
-
-function fadeIn(el){
-  el.classList.add('show');
-  el.classList.remove('hide');  
+function show(id) {
+    if(document.getElementById) {
+        var rollo = document.getElementById(id);
+        rollo.style.display = (rollo.style.display=='block'?'none':'block');
+    }
 }
 
-function fadeOut(el){
-  el.classList.add('hide');
-  el.classList.remove('show');
-}
 
-var btn = document.getElementById('btnFade'),
-    img = document.getElementById('erscheine');
 
-btn.addEventListener('click', function(){
-  if (img.className.indexOf('hide') !== -1) {
-    fadeIn(img);
-    this.innerHTML = 'Fade Out';
-  }
-  else {
-    fadeOut(img);
-    this.innerHTML = 'Fade In';
-  }
-});
 
 /*****************************Move Button*******************************************/
 
