@@ -166,6 +166,14 @@ function show(id) {
     }
 }
 
+function show(id) {
+    if(document.getElementById) {
+        var klappmatrix = document.getElementById(id);
+        klappmatrix.style.display = (klappmatrix.style.display=='block'?'none':'block');
+    }
+}
+
+
 /*****************************Move Button*******************************************/
 
 $(document).ready(function(){
