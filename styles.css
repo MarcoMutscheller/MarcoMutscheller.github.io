@@ -234,14 +234,21 @@ div.button.active {
 }
 
 /****************************************************/
-.butta{
-top: -49px;
-  left: 401px;
-    background: 
-    height: 48px;
-    width: 45px;
-    border: none;
-   color: white; 
+
+.butta {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+}
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
 }
 
 
