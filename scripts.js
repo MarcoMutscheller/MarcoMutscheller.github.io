@@ -190,7 +190,7 @@ function animateDiv(){
     var oldq = $("#interactbutton").offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
     
-    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
+    $("#interactbutton").animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
     });
     
