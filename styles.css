@@ -180,28 +180,56 @@ div.button[data-index="26"] {
   left: 502px;
    background-color: rgb(0, 0, 50);
 }
+
+
+
+div.button[data-index="27"] {
+  top: 151px;
+  left: -300px;
+  background-color: rgb(4, 32, 0);
+}
+
+div.button[data-index="28"] {
+  top: 251px;
+  left: -400px;
+   background-color: rgb(4, 32, 0);
+}
+div.button[data-index="29"] {
+  top: 351px;
+  left: -500px;
+   background-color: rgb(4, 32, 0);
+}
+div.button[data-index="30"] {
+  top: 451px;
+  left: -600px;
+   background-color: rgb(4, 32, 0);
+}
+
 div.button.active {
   opacity: 1;
 }
 
 /****************************************************/
-.buttoncss{
-top: -49px;
-  left: 401px;
-     background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
 
-.buttoncss:hover {
-  background-color: #4CAF50;
+div.butta {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
   color: white;
 }
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
+}
+
+
+
+
+
+/****************************************************/
