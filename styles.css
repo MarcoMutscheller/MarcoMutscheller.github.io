@@ -185,7 +185,7 @@ div.button.active {
 }
 
 /****************************************************/
-#buttoncss{
+.buttoncss{
 top: -49px;
   left: 401px;
      background-color: white; 
@@ -201,7 +201,7 @@ top: -49px;
   cursor: pointer;
 }
 
-#buttoncss:hover {
+.buttoncss:hover {
   background-color: #4CAF50;
   color: white;
 }
@@ -214,3 +214,29 @@ position:fixed;
     
 }
 
+/****************************************************/
+.show {
+  opacity: 1;
+  transition: opacity 1000ms;
+}
+
+.hide {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+button {
+  color: #3d3d3d;
+  margin-top: 30px;
+  padding: 15px;
+  border-radius: 5px;
+  background: #f3f3f3;
+}
+
+/* SANtA STYLES*/
+.santa {
+	height: 300px;
+	width: 200px;
+	position: relative;
+	margin: 50px auto 0;
+}
