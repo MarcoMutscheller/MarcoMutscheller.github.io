@@ -187,10 +187,10 @@ function makeNewPosition(){
 
 function animateDiv(){
     var newq = makeNewPosition();
-    var oldq = $("#interactbutton").offset();
+    var oldq = $('.buttoncss').offset();
     var speed = calcSpeed([oldq.top, oldq.left], newq);
     
-    $("#interactbutton").animate({ top: newq[0], left: newq[1] }, speed, function(){
+    $('.buttoncss').animate({ top: newq[0], left: newq[1] }, speed, function(){
       animateDiv();        
     });
     
