@@ -1,3 +1,30 @@
+/********************************Interactions*******************************************/
+function show(id) {
+    if(document.getElementById) {
+        var next1 = document.getElementById(id);
+        next1.style.display = (next1.style.display=='block'?'none':'block');
+    }
+}function show(id) {
+    if(document.getElementById) {
+        var interactbutton = document.getElementById(id);
+        interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
+    }
+}
+function show(id) {
+    if(document.getElementById) {
+        var rollo = document.getElementById(id);
+        rollo.style.display = (rollo.style.display=='block'?'none':'block');
+    }
+}
+
+
+
+
+/*****************************stop*******************************************/
+
+
+
+
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 
@@ -158,27 +185,5 @@ function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
 
-/********************************Interactions*******************************************/
-function show(id) {
-    if(document.getElementById) {
-        var next1 = document.getElementById(id);
-        next1.style.display = (next1.style.display=='block'?'none':'block');
-    }
-}function show(id) {
-    if(document.getElementById) {
-        var interactbutton = document.getElementById(id);
-        interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
-    }
-}
-function show(id) {
-    if(document.getElementById) {
-        var rollo = document.getElementById(id);
-        rollo.style.display = (rollo.style.display=='block'?'none':'block');
-    }
-}
 
-
-
-
-/*****************************stop*******************************************/
 
