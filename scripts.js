@@ -1,7 +1,34 @@
+/********************************Interactions*******************************************/
+function show(id) {
+    if(document.getElementById) {
+        var next1 = document.getElementById(id);
+        next1.style.display = (next1.style.display=='block'?'none':'block');
+    }
+}function show(id) {
+    if(document.getElementById) {
+        var interactbutton = document.getElementById(id);
+        interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
+    }
+}
+function show(id) {
+    if(document.getElementById) {
+        var rollo = document.getElementById(id);
+        rollo.style.display = (rollo.style.display=='block'?'none':'block');
+    }
+}
+
+
+
+
+/*****************************stop*******************************************/
+
+
+
+
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 
-const sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav', '11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav', '11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav'];
+const sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav', '11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav', '11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav', "tranistion orc.wav", "tranistion drums.wav", "tranistion pluck.wav", "tranistion voc.wav"];
 const levels = [0, 0, -3, -10];
 const loops = [];
 const activeLoops = new Set();
@@ -158,65 +185,5 @@ function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
 
-/********************************Interactions*******************************************/
-function show(id) {
-    if(document.getElementById) {
-        var interactbutton = document.getElementById(id);
-        interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
-    }
-}
-function show(id) {
-    if(document.getElementById) {
-        var rollo = document.getElementById(id);
-        rollo.style.display = (rollo.style.display=='block'?'none':'block');
-    }
-}
 
 
-
-
-/*****************************Move Button*******************************************/
-
-$(document).ready(function(){
-    animateDiv();
-    
-});
-
-function makeNewPosition(){
-    
-    // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
-    
-    var nh = Math.floor(Math.random() * h);
-    var nw = Math.floor(Math.random() * w);
-    
-    return [nh,nw];    
-    
-}
-
-function animateDiv(){
-    var newq = makeNewPosition();
-    var oldq = $('.a').offset();
-    var speed = calcSpeed([oldq.top, oldq.left], newq);
-    
-    $('.a').animate({ top: newq[0], left: newq[1] }, speed, function(){
-      animateDiv();        
-    });
-    
-};
-
-function calcSpeed(prev, next) {
-    
-    var x = Math.abs(prev[1] - next[1]);
-    var y = Math.abs(prev[0] - next[0]);
-    
-    var greatest = x > y ? x : y;
-    
-    var speedModifier = 0.1;
-
-    var speed = Math.ceil(greatest/speedModifier);
-
-    return speed;
-
-}

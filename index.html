@@ -7,6 +7,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  
 
   
 </head>
@@ -14,12 +15,15 @@
 <body> 
     
   <h1>Matrix</h1>
-  <div>
-  <button id="butta" onclick="javascript:show('rollo'); return false">
-      ?</button>
- <button id="butta" onclick="javascript:show('interactbutton'); return false">
+
+ 
+  
+  
+ <button class="fancy" onclick="javascript:show('rollo'); return false">
+      übergang</button>
+ <button class="fancy" onclick="javascript:show('interactbutton'); return false">
       Want to play a 80s solo?</button>
-  </div>
+
    
   
   <div id="buttons">
@@ -64,8 +68,8 @@
     <div class="button" data-index="25"></div>
     <div class="button" data-index="26"></div>
     
-</div>
-   
+</div>  
+    
   
  
   
@@ -73,15 +77,31 @@
     <div class="button" data-index="27"></div>
     <div class="button" data-index="28"></div>
     <div class="button" data-index="29"></div>
-    <div class="button" data-index="30"></div>
-</div>    
-    </div> 
+    <div class="button" data-index="30" onclick="javascript:show("next1");></div>
+    
   
+ </div>
+  
+   
+   <div style="display: none" id="next1">
+    <div class="button" data-index="31"></div>
+    <div class="button" data-index="32"></div>
+    <div class="button" data-index="33"></div>
+    <div class="button" data-index="34"></div>
+    <div class="button" data-index="35"></div>
+    <div class="button" data-index="36"></div>
+    <div class="button" data-index="37"></div>
+    <div class="button" data-index="38"></div>
+    
+</div>
+    
+  </div>
+
 
   
   
-  <script language="JavaScript" src="scripts.js"></script>
-
+ 
+<script language="JavaScript" src="scripts.js"></script>
 
 </body>
 
