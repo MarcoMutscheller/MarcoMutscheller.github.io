@@ -1,3 +1,13 @@
+
+
+
+
+
+body {  
+  background-color: rgb(0, 0, 0);
+  color: aliceblue;
+}
+
 #fancy {
   width: 100px;
   height: 100px;
@@ -13,14 +23,6 @@
   from {top: 0px;}
   to {top: 200px; background-color: blue;}
 }
-}
-
-
-
-
-body {  
-  background-color: rgb(0, 0, 0);
-  color: aliceblue;
 }
 
 
@@ -232,7 +234,7 @@ div.button[data-index="30"] {
 
 
 div.button[data-index="31"] {
-  top: 200px;
+  top: 554px;
   left: -600px;
   background-color: rgb(255, 100, 0);
 }
