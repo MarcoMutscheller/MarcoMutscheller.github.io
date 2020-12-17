@@ -161,6 +161,11 @@ function decibelToLinear(val) {
 /********************************Interactions*******************************************/
 function show(id) {
     if(document.getElementById) {
+        var next1 = document.getElementById(id);
+        next1.style.display = (next1.style.display=='block'?'none':'block');
+    }
+}function show(id) {
+    if(document.getElementById) {
         var interactbutton = document.getElementById(id);
         interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
     }
@@ -172,12 +177,7 @@ function show(id) {
     }
 }
 
-function show(id) {
-    if(document.getElementById) {
-        var next1 = document.getElementById(id);
-        next1.style.display = (next1.style.display=='block'?'none':'block');
-    }
-}
+
 
 
 /*****************************stop*******************************************/
