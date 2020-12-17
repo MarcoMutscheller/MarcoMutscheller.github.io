@@ -205,6 +205,50 @@ div.button[data-index="30"] {
    background-color: rgb(32, 32, 0);
 }
 
+
+div.button[data-index="31"] {
+  top: 604px;
+  left: -600px;
+  background-color: rgb(4, 32, 0);
+}
+
+div.button[data-index="32"] {
+  top: 704px;
+  left: -500px;
+   background-color: rgb(32, 32, 0);
+}
+div.button[data-index="33"] {
+  top: 804px;
+  left: -400px;
+   background-color: rgb(32, 32, 0);
+}
+div.button[data-index="34"] {
+  top: 904px;
+  left: -500px;
+   background-color: rgb(32, 32, 0);
+}
+div.button[data-index="35"] {
+  top: 1004px;
+  left: -600px;
+  background-color: rgb(4, 32, 0);
+}
+
+div.button[data-index="36"] {
+  top: 704px;
+  left: -300px;
+   background-color: rgb(32, 32, 0);
+}
+div.button[data-index="37"] {
+  top: 804px;
+  left: -200px;
+   background-color: rgb(32, 32, 0);
+}
+div.button[data-index="38"] {
+  top: 904px;
+  left: -300px;
+   background-color: rgb(32, 32, 0);
+}
+
 div.button.active {
   opacity: 1;
 }
