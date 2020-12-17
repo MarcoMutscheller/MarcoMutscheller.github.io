@@ -3,23 +3,6 @@ body {
   color: aliceblue;
 }
 
-#fancy {
-  width: 100px;
-  height: 100px;
-  background: red;
-  position: relative;
-  animation-name: example;
-  animation-duration: 3s;  
-  animation-fill-mode: forwards;
-  color: white;
-}
-
-@keyframes example {
-  from {top: 0px;}
-  to {top: 200px; background-color: blue;}
-}
-}
-
 
 h1{
 
@@ -46,6 +29,25 @@ div.button {
   opacity: 0.75;
   
 }
+
+#fancy {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+  color: white;
+}
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
+}
+
+
 
 div.button[data-index="0"] {
   top: -150px;
