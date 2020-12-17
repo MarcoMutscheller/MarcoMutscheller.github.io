@@ -172,7 +172,7 @@ function show(id) {
     }
 }
 
-function display_nextmatrix1(id) {
+function show(id) {
     if(document.getElementById) {
         var next1 = document.getElementById(id);
         next1.style.display = (next1.style.display=='block'?'none':'block');
