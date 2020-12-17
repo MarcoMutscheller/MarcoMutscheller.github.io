@@ -1,3 +1,23 @@
+#fancy {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation-name: example;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+  color: white;
+}
+
+@keyframes example {
+  from {top: 0px;}
+  to {top: 200px; background-color: blue;}
+}
+}
+
+
+
+
 body {  
   background-color: rgb(0, 0, 0);
   color: aliceblue;
@@ -260,22 +280,8 @@ div.button.active {
 
 /****************************************************/
 
-#fancy {
-  width: 100px;
-  height: 100px;
-  background: red;
-  position: relative;
-  animation-name: example;
-  animation-duration: 3s;  
-  animation-fill-mode: forwards;
-  color: white;
-}
 
-@keyframes example {
-  from {top: 0px;}
-  to {top: 200px; background-color: blue;}
-}
-}
+
 
 
 
