@@ -52,7 +52,17 @@ class Loop {
     this.analyser = null;
   
 } 
-  
+ 
+                                        class trans {
+                                                constructor(buffer, button, level = 0) {
+                                                this.buffer = buffer;
+                                                this.trans = trans;
+                                                this.amp = decibelToLinear(level);
+                                                this.gain = null;
+                                                this.source = null;
+                                                this.analyser = null;
+
+} 
     
   start(time, sync = true) {
     const buffer = this.buffer;
@@ -141,7 +151,8 @@ function loadLoops() {
     request.addEventListener('load', () => {
       decodeContext.decodeAudioData(request.response, (buffer) => {
         const button = document.querySelector(`div.button[data-index="${i}"]`);
-        loops[i] = new Loop(buffer, button, levels[i])
+                                                                                        const trans = document.querySelector(`div.trans[data-index="${i}"]`);
+        loops[i] = new Loop(buffer, button, trans, levels[i])
       });
     });
 
