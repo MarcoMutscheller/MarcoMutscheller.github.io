@@ -52,19 +52,7 @@ class Loop {
     this.analyser = null;
   }
     
-    class matrix {
-  constructor(buffer, button, level = 0) {
-    this.buffer = buffer;
-    this.button = button;
-    this.amp = decibelToLinear(level);
-    this.gain = null;
-    if (this.source === null){
-       activeLoops.delete(this);
-         this.button.classList.remove('active');
-            this.button.style.opacity = 0.25;
-    }
-    this.analyser = null;
-  }
+  
     
   start(time, sync = true) {
     const buffer = this.buffer;
