@@ -43,9 +43,10 @@ loadLoops();
 /***************************************************************************/
 
 class Loop {
-  constructor(buffer, button, level = 0) {
+                                                            constructor(buffer, button, trans, level = 0) {
     this.buffer = buffer;
     this.button = button;
+    this.trans = trans;
     this.amp = decibelToLinear(level);
     this.gain = null;
     this.source = null;
@@ -53,16 +54,6 @@ class Loop {
   
 } 
  
-                                        class trans {
-                                                constructor(buffer, button, level = 0) {
-                                                this.buffer = buffer;
-                                                this.trans = trans;
-                                                this.amp = decibelToLinear(level);
-                                                this.gain = null;
-                                                this.source = null;
-                                                this.analyser = null;
-
-} 
     
   start(time, sync = true) {
     const buffer = this.buffer;
@@ -99,7 +90,7 @@ class Loop {
     this.gain = gain;
 
     activeLoops.add(this);
-    this.button.classList.add('active');
+                                                                        this.button.trans.classList.add('active');
   }
 
   stop(time) {
@@ -111,9 +102,17 @@ class Loop {
     this.gain = null;
 
     activeLoops.delete(this);
-    this.button.classList.remove('active');
-    this.button.style.opacity = 0.25;
+                                                                        this.button.trans.classList.remove('active');
+                                                                        this.button.trans.style.opacity = 0.25;
   }
+    
+                                                                        übergang() {
+   
+                                                                               if (this.trans != null){
+                                                                               this.button.stop(time + fadeTime);
+                                                                                 activeLoops.delete(this);
+                                                                               }
+                                                                         }
 
   displayIntensity() {
     const analyser = this.analyser;
@@ -152,7 +151,7 @@ function loadLoops() {
       decodeContext.decodeAudioData(request.response, (buffer) => {
         const button = document.querySelector(`div.button[data-index="${i}"]`);
                                                                                         const trans = document.querySelector(`div.trans[data-index="${i}"]`);
-        loops[i] = new Loop(buffer, button, trans, levels[i])
+                                                                                        loops[i] = new Loop(buffer, button, trans, levels[i])
       });
     });
 
