@@ -29,8 +29,7 @@ const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 
 const sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav', '11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav', '11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav', "tranistion orc.wav", "tranistion drums.wav", "tranistion voc.wav"];
-const transistion = ["tranistion orc.wav", "tranistion drums.wav", "tranistion voc.wav"];
-const nextlevel = ["tranistion orc.wav", "tranistion drums.wav", "tranistion voc.wav"];
+const transistion = ["tranistion orc.wav"[28], "tranistion drums.wav"[29], "tranistion voc.wav"[30]];
 const levels = [0, 0, -3, -10];
 const loops = [];
 const activeLoops = new Set();
@@ -53,7 +52,7 @@ class Loop {
     this.source = null;
     this.analyser = null;
   }
-    
+} 
   
     
   start(time, sync = true) {
@@ -139,7 +138,7 @@ function loadLoops() {
   for (let i = 0; i < sounds.length; i++) {
     const request = new XMLHttpRequest();
     request.responseType = 'arraybuffer';
-    request.open('GET', sounds[i], transition[i], nextlevel[i]);
+    request.open('GET', sounds[i], transition[i]);
     request.addEventListener('load', () => {
       decodeContext.decodeAudioData(request.response, (buffer) => {
         const button = document.querySelector(`div.button[data-index="${i}"]`);
