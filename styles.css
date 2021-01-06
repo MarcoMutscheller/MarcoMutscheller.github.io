@@ -206,7 +206,11 @@ div.button[data-index="29"] {
 }
 
 
-
+div.button[data-index="30"] {
+   top: 554px;
+  left: -700px;
+  background-color: rgb(255, 100, 0);
+}
 div.button[data-index="31"] {
    top: 554px;
   left: -600px;
