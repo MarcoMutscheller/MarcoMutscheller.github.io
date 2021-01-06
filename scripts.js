@@ -108,9 +108,9 @@ class Loop {
     
                                                                         übergang() {
    
-                                                                               if (this.trans != null){
-                                                                               this.button.stop(time + fadeTime);
-                                                                                 activeLoops.delete(this);
+                                                                               if (sounds[28] != null){
+                                                                                  
+                                                                                 activeLoops.delete(sounds[1,2,3,4,5,6,7,8,9]);
                                                                                }
                                                                          }
 
