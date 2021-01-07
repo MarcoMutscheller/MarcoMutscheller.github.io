@@ -41,7 +41,47 @@ window.addEventListener('touchstart', onButton);
 loadLoops();
 
 /***************************************************************************/
+übergang(){
+    
+    if (.übergangsmatrix.sounds[i] > 0){
+    .Matrix1.sounds[i] = -1 (stop)
+     if (.übergangsmatrix.sounds[i] > 1){
+    .Matrix2.sounds[i] =-1 (stop)
+         
+    } 
+    }
+}
 
+
+
+class Matrix1{
+constructor(buffer, button, level = 0) {
+man braucht neuen buffer
+   const soundmatrix1 [] 0-8 loops
+   const 
+   const alle von oben
+   ....
+
+}
+ 
+ if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
+ index reinbringen über klassenamen.variablennamen
+
+}
+
+class Matrix2{
+constructor(buffer, button, trans, level = 0) {
+
+   const soundmatrix2 [] 0-8
+   const 
+   const
+   ....
+
+}
+ if i > 1 , dann schalte den rest ab 
+ 
+
+}
 class Loop {
     constructor(buffer, button, trans, level = 0) {
     this.buffer = buffer;
@@ -92,7 +132,7 @@ class Loop {
 
     activeLoops.add(this);
     this.button.classList.add('active');
-                                                                                        this.trans.classList.add('active');
+                                                                                       
   }
 
   stop(time) {
@@ -106,20 +146,12 @@ class Loop {
     activeLoops.delete(this);
                                                                         
    this.button.classList.remove('active');
-                                                                                        this.trans.classList.remove('active');                                       
+                                                                                                                            
    this.button.style.opacity = 0.25;
-                                                                                        this.trans.style.opacity = 0.25;
+                                                                                        
   }
     
-                                                                        übergang() {
-   
-                                                                               if (sounds[27] !== null){
-                                                                                  
-                                                                                 activeLoops.delete(sounds[9,10,11,12,13,14,15,16,17]);
-                                                                               }
-                                                                            
-                                                                           
-                                                                         }
+                                                                        
 
   displayIntensity() {
     const analyser = this.analyser;
@@ -153,13 +185,13 @@ function loadLoops() {
   for (let i = 0; i < sounds.length; i++) {
     const request = new XMLHttpRequest();
     request.responseType = 'arraybuffer';
-    request.open('GET', sounds[i]);
+    request.open('GET', sounds[i]);                                                      // ausweg falls nötig: class buttonmatrix + constructor 1,2,3..  "GET, sounds [i], buttons [i]"
     request.addEventListener('load', () => {
     decodeContext.decodeAudioData(request.response, (buffer) => {
-    const button = document.querySelector(`div.button[data-index="${i}"]`);
-                                                                                        const trans = document.querySelector(`div.trans[data-index="${i}"]`);                         
+    const button = document.querySelector(`div.button[data-index="${i}"]`);               // + data index für buttons...dann zähler machen mit set time 5 sek, dass button und loop sich +1 wandeln alle 5 sek
+                                                                                                               
     loops[i] = new Loop(buffer, button, levels[i])
-                                                                                         loops[i] = new Loop(buffer, trans, levels[i])
+                                                                                        
       });
     });
 
