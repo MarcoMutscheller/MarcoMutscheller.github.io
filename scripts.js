@@ -13,13 +13,11 @@ function show(id) {
 function show(id) {
     if(document.getElementById) {
         var rollo = document.getElementById(id);
+        document.getElementById("rollo").style.visibility='visible';
         rollo.style.display = (rollo.style.display=='block'?'none':'block');
     }
 }
 
-function show(id) {
-    document.getElementById("rollo").style.visibility='visible';
-}
 
 
 /*****************************stop*******************************************/
