@@ -110,7 +110,17 @@ class Loop {
    
                                                                                if (sounds[28] != null){
                                                                                   
-                                                                                 activeLoops.delete(sounds[1,2,3,4,5,6,7,8,9]);
+                                                                                 activeLoops.delete(sounds[0,1,2,3,4,5,6,7,8]);
+                                                                               }
+                                                                            
+                                                                                if (sounds[29] != null){
+                                                                                  
+                                                                                 activeLoops.delete(sounds[9,10,11,12,13,14,15,16,17]);
+                                                                               }
+                                                                            
+                                                                                if (sounds[30] != null){
+                                                                                  
+                                                                                 activeLoops.delete(sounds[18,19,20,21,22,23,24,25,26]);
                                                                                }
                                                                          }
 
