@@ -43,9 +43,18 @@ loadLoops();
 /***************************************************************************/
 
 class Loop {
-                                                            constructor(buffer, button, trans, level = 0) {
+    constructor(buffer, button, level = 0) {
     this.buffer = buffer;
     this.button = button;
+    this.amp = decibelToLinear(level);
+    this.gain = null;
+    this.source = null;
+    this.analyser = null;
+  
+} 
+ class transistion {
+    constructor(buffer, trans, level = 0) {
+    this.buffer = buffer;
     this.trans = trans;
     this.amp = decibelToLinear(level);
     this.gain = null;
@@ -90,7 +99,8 @@ class Loop {
     this.gain = gain;
 
     activeLoops.add(this);
-                                                                        this.button.trans.classList.add('active');
+    this.button.classList.add('active');
+                                                                                        this.trans.classList.add('active');
   }
 
   stop(time) {
@@ -102,8 +112,11 @@ class Loop {
     this.gain = null;
 
     activeLoops.delete(this);
-                                                                        this.button.trans.classList.remove('active');
-                                                                        this.button.trans.style.opacity = 0.25;
+                                                                        
+   this.button.classList.remove('active');
+                                                                                        this.trans.classList.remove('active');                                       
+   this.button.style.opacity = 0.25;
+                                                                                        this.trans.style.opacity = 0.25;
   }
     
                                                                         übergang() {
@@ -158,10 +171,11 @@ function loadLoops() {
     request.responseType = 'arraybuffer';
     request.open('GET', sounds[i]);
     request.addEventListener('load', () => {
-      decodeContext.decodeAudioData(request.response, (buffer) => {
-                                                                        const button = document.querySelector(`div.button.trans[data-index="${i}"]`);
-                                                                                        
-                                                                                        loops[i] = new Loop(buffer, button, trans, levels[i])
+    decodeContext.decodeAudioData(request.response, (buffer) => {
+    const button = document.querySelector(`div.button[data-index="${i}"]`);
+                                                                                        const trans = document.querySelector(`div.trans[data-index="${i}"]`);                         
+    loops[i] = new Loop(buffer, button, levels[i])
+                                                                                         loops[i] = new Loop(buffer, trans, levels[i])
       });
     });
 
