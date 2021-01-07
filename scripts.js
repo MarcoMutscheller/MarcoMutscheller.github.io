@@ -17,8 +17,8 @@ function show(id) {
     }
 }
 
-function show(rollo) {
-    document.getElementById(rollo).style.visibility='visible';
+function show(id) {
+    document.getElementById("rollo").style.visibility='visible';
 }
 
 
