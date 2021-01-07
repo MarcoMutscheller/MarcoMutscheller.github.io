@@ -73,7 +73,7 @@ class Matrix2{
 constructor(buffer, button, trans, level = 0) {
 
    const soundmatrix2 [] 0-8
-   const 
+   const loops1 []
    const
    ....
 
