@@ -113,7 +113,7 @@ class Loop {
     
                                                                         übergang() {
    
-                                                                               if (this.trans === null){
+                                                                               if (this.source === null){
                                                                                   
                                                                                  activeLoops.delete(this.button);
                                                                                }
