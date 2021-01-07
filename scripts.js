@@ -44,9 +44,9 @@ loadLoops();
 übergang(){
     
     if (.übergangsmatrix.sounds[i] > 0){
-    .Matrix1.sounds[i] = -1 (stop)
+    .Matrix1.soundmatrix1[i] = -1 (stop)
      if (.übergangsmatrix.sounds[i] > 1){
-    .Matrix2.sounds[i] =-1 (stop)
+    .Matrix2.soundmatrix2[i] =-1 (stop)
          
     } 
     }
@@ -78,14 +78,14 @@ constructor(buffer, button, trans, level = 0) {
    ....
 
 }
- if i > 1 , dann schalte den rest ab 
+  if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
+ index reinbringen über klassenamen.variablennamen
  
 
 }
 class Loop {
-    constructor(buffer, button, trans, level = 0) {
+    constructor(buffer, button, level = 0) {
     this.buffer = buffer;
-    this.trans = trans;
     this.button = button;
     this.amp = decibelToLinear(level);
     this.gain = null;
@@ -188,7 +188,7 @@ function loadLoops() {
     request.open('GET', sounds[i]);                                                      // ausweg falls nötig: class buttonmatrix + constructor 1,2,3..  "GET, sounds [i], buttons [i]"
     request.addEventListener('load', () => {
     decodeContext.decodeAudioData(request.response, (buffer) => {
-    const button = document.querySelector(`div.button[data-index="${i}"]`);               // + data index für buttons...dann zähler machen mit set time 5 sek, dass button und loop sich +1 wandeln alle 5 sek
+    const button = document.querySelector(`div.button[data-index="${i}"]`);               // + data index für buttons...dann zähler machen mit set time 5 sek, dass button und loop sich +1 wandeln alle 5 sek, email schreiben "wie mehr randomness zählen?"
                                                                                                                
     loops[i] = new Loop(buffer, button, levels[i])
                                                                                         
