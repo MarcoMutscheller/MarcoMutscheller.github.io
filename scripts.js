@@ -17,7 +17,9 @@ function show(id) {
     }
 }
 
-
+function show(rollo) {
+    document.getElementById(rollo).style.visibility='visible';
+}
 
 
 /*****************************stop*******************************************/
