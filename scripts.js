@@ -113,9 +113,9 @@ class Loop {
     
                                                                         übergang() {
    
-                                                                               if (this.source === null){
+                                                                               if (sounds[27] != null){
                                                                                   
-                                                                                 activeLoops.delete(this.button);
+                                                                                 activeLoops.delete(this.button sounds[9,10,11,12,13,14,15,16,17]);
                                                                                }
                                                                             
                                                                            
