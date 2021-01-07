@@ -140,7 +140,7 @@ class Loop {
       }
 
       const opacity = Math.min(1, 0.25 + 10 * Math.sqrt(sum / fftSize));
-      this.button.style.opacity = opacity;
+      this.button.trans.style.opacity = opacity;
     }
   }
 
