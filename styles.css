@@ -276,7 +276,7 @@ div.button.active {
 
 /****************************************************/
 
-div.fancy {
+.fancy {
   width: 100px;
   height: 100px;
   background: red;
