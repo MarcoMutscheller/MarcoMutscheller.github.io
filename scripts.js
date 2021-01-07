@@ -159,8 +159,8 @@ function loadLoops() {
     request.open('GET', sounds[i]);
     request.addEventListener('load', () => {
       decodeContext.decodeAudioData(request.response, (buffer) => {
-        const button = document.querySelector(`div.button[data-index="${i}"]`);
-                                                                                        const trans = document.querySelector(`div.trans[data-index="${i}"]`);
+                                                                        const button = document.querySelector(`div.button.trans[data-index="${i}"]`);
+                                                                                        
                                                                                         loops[i] = new Loop(buffer, button, trans, levels[i])
       });
     });
