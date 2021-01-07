@@ -41,7 +41,16 @@ window.addEventListener('touchstart', onButton);
 loadLoops();
 
 /***************************************************************************/
-
+class trans {
+    constructor(buffer, trans, level = 0) {
+    this.buffer = buffer;
+    this.trans = trans;
+    this.amp = decibelToLinear(level);
+    this.gain = null;
+    this.source = null;
+    this.analyser = null;
+  
+} 
 class Loop {
     constructor(buffer, button, level = 0) {
     this.buffer = buffer;
@@ -52,16 +61,7 @@ class Loop {
     this.analyser = null;
   
 } 
- class transistion {
-    constructor(buffer, trans, level = 0) {
-    this.buffer = buffer;
-    this.trans = trans;
-    this.amp = decibelToLinear(level);
-    this.gain = null;
-    this.source = null;
-    this.analyser = null;
-  
-} 
+ 
  
     
   start(time, sync = true) {
