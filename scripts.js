@@ -1,4 +1,4 @@
-/********************************Interactions*******************************************/
+/********************************Interactions*******************************************/   // sind unwichtig momentan
 function show(id) {
     if(document.getElementById) {
         var next1 = document.getElementById(id);
@@ -41,7 +41,7 @@ window.addEventListener('touchstart', onButton);
 loadLoops();
 
 /***************************************************************************/
-übergang(){
+übergang(){                       // so ähnlich hat er gesagt könnte es funktionieren... aber nur ein Versuch von mir
     
     if (.übergangsmatrix.sounds[i] > 0){
     .Matrix1.soundmatrix1[i] = -1 (stop)
@@ -64,12 +64,41 @@ man braucht neuen buffer
 
 }
  
- if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
+ if i > 0 , dann mach wieder auf 0 // damit nur Loop pro Matrix spielt und sie nicht überlappen (z.B. grüne Matrix nur ein Loop spielbar)
  index reinbringen über klassenamen.variablennamen
 
 }
 
 class Matrix2{
+constructor(buffer, button, trans, level = 0) {
+
+   const soundmatrix2 [] 0-8
+   const loops1 []
+   const
+   ....
+
+}
+  if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
+ index reinbringen über klassenamen.variablennamen
+ 
+
+}
+
+class Matrix3{
+constructor(buffer, button, trans, level = 0) {
+
+   const soundmatrix2 [] 0-8
+   const loops1 []
+   const
+   ....
+
+}
+  if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
+ index reinbringen über klassenamen.variablennamen
+ 
+
+}
+class Übergangsmatrix{
 constructor(buffer, button, trans, level = 0) {
 
    const soundmatrix2 [] 0-8
