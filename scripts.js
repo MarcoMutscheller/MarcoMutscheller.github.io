@@ -28,7 +28,7 @@ function show(id) {
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 
-const sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav', '11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav', '11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav', "tranistion orc.wav", "tranistion drums.wav", "tranistion voc.wav"];
+const sounds = ['11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav', '11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav', "tranistion orc.wav", "tranistion drums.wav", "tranistion voc.wav"];
 const levels = [0, 0, -3, -10];
 const loops = [];
 const activeLoops = new Set();
@@ -55,13 +55,36 @@ constructor(buffer, button, level = 0) {
    this.source = null;
    this.analyser = null;
 }
+function loadMatrix1() {
+  const decodeContext = new AudioContext();
 
+  // laden von audio buffer MATRIX 1 
+  for (let i = 0; i < matrix1sounds.length; i++) {
+    const request = new XMLHttpRequest();
+    request.responseType = 'arraybuffer';
+    request.open('GET', matrix1sounds[i]);                                                     
+    decodeContext.decodeAudioData(request.response, (buffer) => {
+    const button = document.querySelector(`div.button[data-index="${i}"]`);               
+                                                                                                               
+    loops1[i] = new Loop(buffer, button, levels[i])
+                                                                                        
+      });
+    });
+
+    request.send();
+  }
+}
+    //speichere loops 0-8, aber wenn mehr als 1 Loop spielt dann stoppe 
     for (let i = 0; i < 8; i++){
     loops1[i]= i;
     if (loops1[i] > 0) {
-        loops[i].stop;
+        loops1[i].stop;
+        else{
+        loops1[i].start;
+        }
     }
 
+}
 }
 
 class Loop {
@@ -162,14 +185,13 @@ class Loop {
 function loadLoops() {
   const decodeContext = new AudioContext();
 
-  // load audio buffers
+  // load audio buffers ALLE
   for (let i = 0; i < sounds.length; i++) {
     const request = new XMLHttpRequest();
     request.responseType = 'arraybuffer';
-    request.open('GET', sounds[i]);                                                      // ausweg falls nötig: class buttonmatrix + constructor 1,2,3..  "GET, sounds [i], buttons [i]"
-    request.addEventListener('load', () => {
+    request.open('GET', sounds[i]);                                                     
     decodeContext.decodeAudioData(request.response, (buffer) => {
-    const button = document.querySelector(`div.button[data-index="${i}"]`);               // + data index für buttons...dann zähler machen mit set time 5 sek, dass button und loop sich +1 wandeln alle 5 sek, email schreiben "wie mehr randomness zählen?"
+    const button = document.querySelector(`div.button[data-index="${i}"]`);               
                                                                                                                
     loops[i] = new Loop(buffer, button, levels[i])
                                                                                         
@@ -180,10 +202,13 @@ function loadLoops() {
   }
 }
 
+
+
 function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
-  const loop = loops[index];
+  const loop = loops[index]; loops1[index];
+ 
 
   if (audioContext === null)
     audioContext = new AudioContext();
@@ -209,7 +234,7 @@ function onButton(evt) {
 function displayIntensity() {
   for (let loop of activeLoops)
     loop.displayIntensity();
-
+   
   if (activeLoops.size > 0)
     window.requestAnimationFrame(displayIntensity);
 }
