@@ -42,7 +42,50 @@ loadLoops();
 
 /***************************************************************************/
 
+class Matrix1{
+constructor(buffer, button, level = 0) {
 
+   const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+   const loops1 = [];
+   const activeLoops = new Set();
+   this.buffer = buffer;
+   this.button = button;
+   this.amp = decibelToLinear(level);
+   this.gain = null;
+   this.source = null;
+   this.analyser = null;
+}
+function loadMatrix1() {
+  const decodeContext = new AudioContext();
+
+  // laden von audio buffer MATRIX 1 
+  for (let i = 0; i < matrix1sounds.length; i++) {
+    const request = new XMLHttpRequest();
+    request.responseType = 'arraybuffer';
+    request.open('GET', matrix1sounds[i]);                                                     
+    decodeContext.decodeAudioData(request.response, (buffer) => {
+    const button = document.querySelector(`div.button[data-index="${i}"]`);               
+                                                                                                               
+    loops1[i] = new Loop(buffer, button, levels[i])
+                                                                                        
+      });
+    });
+
+    request.send();
+  }
+}
+    //speichere loops 0-8, aber wenn mehr als 1 Loop spielt dann stoppe 
+    for (let i = 0; i < 8; i++){
+    loops1[i]= i;
+    if (loops1[i] > 0) {
+        loops1[i].stop;
+        else{
+        loops1[i].start;
+        }
+    }
+
+}
+}
 
 class Loop {
     constructor(buffer, button, level = 0) {
