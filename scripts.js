@@ -41,77 +41,29 @@ window.addEventListener('touchstart', onButton);
 loadLoops();
 
 /***************************************************************************/
-übergang(){                       // so ähnlich hat er gesagt könnte es funktionieren... aber nur ein Versuch von mir
-    
-    if (.übergangsmatrix.sounds[i] > 0){
-    .Matrix1.soundmatrix1[i] = -1 (stop)
-     if (.übergangsmatrix.sounds[i] > 1){
-    .Matrix2.soundmatrix2[i] =-1 (stop)
-         
-    } 
-    }
-}
-
-
 
 class Matrix1{
 constructor(buffer, button, level = 0) {
-man braucht neuen buffer
-   const soundmatrix1 [] 0-8 loops
-   const 
-   const alle von oben
-   ....
 
+   const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+   const loops1 = [];
+   const activeLoops = new Set();
+   this.buffer = buffer;
+   this.button = button;
+   this.amp = decibelToLinear(level);
+   this.gain = null;
+   this.source = null;
+   this.analyser = null;
 }
- 
- if i > 0 , dann mach wieder auf 0 // damit nur Loop pro Matrix spielt und sie nicht überlappen (z.B. grüne Matrix nur ein Loop spielbar)
- index reinbringen über klassenamen.variablennamen
 
-}
-
-class Matrix2{
-constructor(buffer, button, trans, level = 0) {
-
-   const soundmatrix2 [] 0-8
-   const loops1 []
-   const
-   ....
-
-}
-  if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
- index reinbringen über klassenamen.variablennamen
- 
+    for (let i = 0; i < 8; i++){
+    loops1[i]= i;
+    if (loops1[i] > 0) {
+        loops[i].stop;
+    }
 
 }
 
-class Matrix3{
-constructor(buffer, button, trans, level = 0) {
-
-   const soundmatrix2 [] 0-8
-   const loops1 []
-   const
-   ....
-
-}
-  if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
- index reinbringen über klassenamen.variablennamen
- 
-
-}
-class Übergangsmatrix{
-constructor(buffer, button, trans, level = 0) {
-
-   const soundmatrix2 [] 0-8
-   const loops1 []
-   const
-   ....
-
-}
-  if i > 0 , dann mach wieder auf 0 // damit nur einer spielt
- index reinbringen über klassenamen.variablennamen
- 
-
-}
 class Loop {
     constructor(buffer, button, level = 0) {
     this.buffer = buffer;
