@@ -39,7 +39,7 @@ const übergangdrums = ["tranistion drums.wav"];
 const übergangorc = ["tranistion orc.wav"];
 const übergangvocal = ["tranistion voc.wav"];
 const levels = [0, 0, -3, -10];
-const loops1 = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+const loops1 = [];
 const loops2 = ['11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav'];
 const loops3 = ['11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav'];
 const loops4 = ["tranistion drums.wav"];
@@ -62,7 +62,7 @@ loadLoops();
 class Matrix1{ 
 constructor(buffer, button, level = 0) {
 
-const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+const matrix1sounds = [];
    const loops1 = [];
    const activeLoops = new Set();
    this.buffer = buffer;
@@ -151,7 +151,24 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
     return (this.source !== null);
   }
   
+  loadMatrix1() {
+    const decodeContext = new AudioContext();
   
+    // laden von audio buffer MATRIX 1 
+    for (let i = 0; i < matrix1sounds.length; i++) {
+      const request = new XMLHttpRequest();
+      request.responseType = 'arraybuffer';
+      request.open('GET', matrix1sounds[i]);                                                     
+      decodeContext.decodeAudioData(request.response, (buffer) => {
+      const button = document.querySelector(`div.button[name="matrix1sounds"][value="${i}"]`);               
+                                                                                                                 
+      loops1[i] = new Loop(buffer, button, levels[i])
+                                                                                          
+        });
+      };
+  
+      request.send(); 
+    }
 
     
 }
@@ -1256,24 +1273,7 @@ class Matrix2{
 
 //// global : button erzeugen und stopfunktionen
 
-function loadMatrix1() {
-    const decodeContext = new AudioContext();
-  
-    // laden von audio buffer MATRIX 1 
-    for (let i = 0; i < matrix1sounds.length; i++) {
-      const request = new XMLHttpRequest();
-      request.responseType = 'arraybuffer';
-      request.open('GET', matrix1sounds[i]);                                                     
-      decodeContext.decodeAudioData(request.response, (buffer) => {
-      const button = document.querySelector(`div.button[name="matrix1sounds"][value="${i}"]`);               
-                                                                                                                 
-      loops1[i] = new Loop(buffer, button, levels[i])
-                                                                                          
-        });
-      };
-  
-      request.send(); 
-    }
+
 
 
 function uebergang(){
