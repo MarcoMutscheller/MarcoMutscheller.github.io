@@ -142,132 +142,131 @@ div.button[name="matrix2sounds"][value="8"] {
   left: -598px;
   background-color: rgb(70, 0, 0);
 }
-
-div.button[data-index="18"] {
+/***************************************************************/
+div.button[name="matrix3sounds"][value="0"] {
   top: -150px;
   left: 300px;
   background-color: rgb(0, 0, 150);
 }
-div.button[data-index="19"] {
+div.button[name="matrix3sounds"][value="1"] {
   top: -150px;
   left: 401px;
   background-color: rgb(0, 0, 150);
 }
 
-div.button[data-index="20"] {
+div.button[name="matrix3sounds"][value="2"] {
   top: -150px;
   left: 502px;
    background-color: rgb(0, 0, 150);
 }
-div.button[data-index="21"] {
+div.button[name="matrix3sounds"][value="3"] {
   top: -49px;
   left: 300px;
  background-color: rgb(0, 0, 100);
 }
 
-div.button[data-index="22"] {
+div.button[name="matrix3sounds"][value="4"] {
   top: -49px;
   left: 401px;
    background-color: rgb(0, 0, 100);
 }
-div.button[data-index="23"] {
+div.button[name="matrix3sounds"][value="5"] {
   top: -49px;
   left: 502px;
   background-color: rgb(0, 0, 100);
 }
 
-div.button[data-index="24"] {
+div.button[name="matrix3sounds"][value="6"] {
   top: 49px;
   left: 300px;
    background-color: rgb(0, 0, 50);
 }
-div.button[data-index="25"] {
+div.button[name="matrix3sounds"][value="7"] {
   top: 49px;
   left: 401px;
    background-color: rgb(0, 0, 50);
 }
-div.button[data-index="26"] {
+div.button[name="matrix3sounds"][value="8"] {
   top: 49px;
   left: 502px;
    background-color: rgb(0, 0, 50);
 }
 
+/********************************************************/
 
-
-div.trans[data-index="27"] {
+div.button[name="übergangdrums"][value="0"] {
   top: 151px;
   left: -300px;
   background-color: rgb(4, 32, 0);
 }
 
-div.trans[data-index="28"] {
+div.button[name="übergangorc"][value="0"] {
   top: 252px;
   left: -400px;
    background-color: rgb(32, 32, 0);
 }
-div.trans[data-index="29"] {
+div.button[name="übergangvocal"][value="0"] {
   top: 353px;
   left: -500px;
    background-color: rgb(32, 32, 0);
 }
 
+/*******************************************************************/
 
-div.button[data-index="30"] {
+div.button[name="matrixneusounds"][value="0"] {
    top: 554px;
   left: -700px;
   background-color: rgb(255, 100, 0);
 }
-div.button[data-index="31"] {
+div.button[name="matrixneusounds"][value="1"] {
    top: 554px;
   left: -600px;
   background-color: rgb(255, 100, 0);
 }
 
-div.button[data-index="32"] {
+div.button[name="matrixneusounds"][value="2"] {
   top: 554px;
   left: -500px;
    background-color: rgb(255, 100, 0);
 }
-div.button[data-index="33"] {
+div.button[name="matrixneusounds"][value="3"] {
   top: 554px;
   left: -400px;
    background-color: rgb(255, 100, 0);
 }
-div.button[data-index="34"] {
+div.button[name="matrixneusounds"][value="4"] {
   top: 554px;
   left: -500px;
   background-color: rgb(255, 100, 0);;
 }
-div.button[data-index="35"] {
+div.button[name="matrixneusounds"][value="5"] {
   top: 554px;
   left: -600px;
   background-color: rgb(255, 100, 0);
 }
 
-div.button[data-index="36"] {
+div.button[name="matrixneusounds"][value="6"] {
   top: 554px;
   left: -300px;
    background-color: rgb(255, 100, 0);
 }
-div.button[data-index="37"] {
+div.button[name="matrixneusounds"][value="7"] {
   top: 554px;
   left: -200px;
    background-color: rgb(255, 100, 0);
 }
-div.button[data-index="38"] {
-  top: 554px;
-  left: -300px;
-   background-color: rgb(255, 100, 0);
-}
-div.button[data-index="39"] {
+div.button[name="matrixneusounds"][value="8"] {
   top: 554px;
   left: -300px;
    background-color: rgb(255, 100, 0);
 }
 
+
 div.button.active {
   opacity: 1;
 }
+/****************************************************/
+
 
 /****************************************************/
 
@@ -286,7 +285,7 @@ button.fancy {
   from {top: 0px;}
   to {top: 200px; background-color: blue;}
 }
-}
+
 
 
 

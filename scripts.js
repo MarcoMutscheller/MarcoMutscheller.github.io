@@ -34,6 +34,7 @@ const matrix3sounds = ['11 solo synth.wav', '12 solo synth.wav', '13 solo synth.
 const matrixneusounds = ["11 pluck.wav", "12 pluck.wav", "13 pluck.wav", "21 pluck.wav", "22 pluck.wav", "23 pluck.wav", "31 pluck.wav", "32 pluck.wav", "33 pluck.wav"];
 const matrixbass = ["bass low.wav", "bass high.wav"];
 const matrixguitar = ["guitar mid.wav", "guitar left.wav", "guitar right.wav", "guitar solo.wav"];
+const matrixdrumsounds = ["kick.wav", "snare.wav", "cymbals.wav"];
 const übergangdrums = ["tranistion drums.wav"];
 const übergangorc = ["tranistion orc.wav"];
 const übergangvocal = ["tranistion voc.wav"];
@@ -1162,6 +1163,118 @@ class Matrix2{
                           }
                         }
                             
+                        class MatrixDrums{ 
+                            constructor(buffer, button, level = 0) {
+                            
+                            const matrixdrumsounds = ["guitar mid.wav", "guitar left.wav", "guitar right.wav", "guitar solo.wav"];
+                               const loops10 = [];
+                               const activeLoops = new Set();
+                               this.buffer = buffer;
+                               this.button = button;
+                               this.amp = decibelToLinear(level);
+                               this.gain = null;
+                               this.source = null;
+                               this.analyser = null;
+                            }
+                                 start(time, sync = true) {
+                                const buffer = this.buffer;
+                                let analyser = this.analyser;
+                                let offset = 0;
+                            
+                                if (analyser === null) {
+                                  analyser = audioContext.createAnalyser();
+                                  this.analyser = analyser;
+                                  this.analyserArray = new Float32Array(analyser.fftSize);
+                                }
+                            
+                                const gain = audioContext.createGain();
+                                gain.connect(audioContext.destination);
+                                gain.connect(analyser);
+                            
+                                if (sync) {
+                                  // fade in only when starting somewhere in the middle
+                                  gain.gain.value = 0;
+                                  gain.gain.setValueAtTime(0, time);
+                                  gain.gain.linearRampToValueAtTime(this.amp, time + fadeTime);
+                            
+                                  // set offset to loop time
+                                  offset = (time - loopStartTime) % buffer.duration;
+                                }
+                            
+                                const source = audioContext.createBufferSource();
+                                source.connect(gain);
+                                source.buffer = buffer;
+                                source.loop = true;
+                                source.start(time, offset);
+                            
+                                this.source = source;
+                                this.gain = gain;
+                            
+                                activeLoops.add(this);
+                                this.button.classList.add('active');
+                                                                                                                   
+                              }
+                                
+                                  stop(time) {
+                                this.source.stop(time + fadeTime);
+                                this.gain.gain.setValueAtTime(this.amp, time);
+                                this.gain.gain.linearRampToValueAtTime(0, time + fadeTime);
+                            
+                                this.source = null;
+                                this.gain = null;
+                            
+                                activeLoops.delete(this);
+                                                                                                    
+                               this.button.classList.remove('active');
+                                                                                                                                                        
+                               this.button.style.opacity = 0.25;
+                                                                                                                    
+                              }
+                                
+                                 displayIntensity() {
+                                const analyser = this.analyser;
+                            
+                                if (analyser.getFloatTimeDomainData) {
+                                  const array = this.analyserArray;
+                                  const fftSize = analyser.fftSize;
+                            
+                                  analyser.getFloatTimeDomainData(array);
+                            
+                                  let sum = 0;
+                                  for (let i = 0; i < fftSize; i++) {
+                                    const value = array[i];
+                                    sum += (value * value);
+                                  }
+                            
+                                  const opacity = Math.min(1, 0.25 + 10 * Math.sqrt(sum / fftSize));
+                                  this.button.trans.style.opacity = opacity;
+                                }
+                              }
+                            
+                              get isPlaying() {
+                                return (this.source !== null);
+                              }
+                            
+                                
+                                 loadMatrixDrums() {
+                              const decodeContext = new AudioContext();
+                            
+                              // laden von audio buffer MATRIX 1 
+                              for (let i = 0; i < matrixdrumsounds.length; i++) {
+                                const request = new XMLHttpRequest();
+                                request.responseType = 'arraybuffer';
+                                request.open('GET', matrixdrumsounds[i]);                                                     
+                                decodeContext.decodeAudioData(request.response, (buffer) => {
+                                const button = document.querySelector(`div.button[name="matrixdrumsounds"value="${i}"]`);               
+                                                                                                                                           
+                                loops10[i] = new Loop(buffer, button, levels[i])
+                                                                                                                    
+                                  });
+                                };
+                            
+                                request.send();
+                              }
+                            }
                         
  //hier gleiches für neue Matrizen
 
