@@ -169,7 +169,44 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
       request.send(); 
     }
 
-    
+    onButton(evt) {
+        const target = evt.target;
+        const index = target.dataset.index;
+        const loop = loops1[index];
+       
+      
+        if (audioContext === null)
+          audioContext = new AudioContext();
+      
+        if (loop) {
+          const time = audioContext.currentTime;
+          let syncLoopPhase = true;
+      
+          if (activeLoops.size === 0) {
+            loopStartTime = time;
+            syncLoopPhase = false;
+            window.requestAnimationFrame(displayIntensity);
+          }
+      
+          if (!loop.isPlaying) {
+            loop.start(time, syncLoopPhase);
+          } else {
+            loop.stop(time);
+          }
+        }
+      }
+      
+      displayIntensity() {
+        for (let loop of activeLoops)
+          loop.displayIntensity();
+         
+        if (activeLoops.size > 0)
+          window.requestAnimationFrame(displayIntensity);
+      }
+      
+      decibelToLinear(val) {
+        return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
+      }
 }
 
 class Matrix2{ 
@@ -284,7 +321,7 @@ class Matrix2{
         request.send();
       }
 
-        
+      
     }
 
     class Matrix3{ 
@@ -1219,7 +1256,7 @@ class Matrix2{
 
 
 
-  
+  /*
 function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
@@ -1258,3 +1295,4 @@ function displayIntensity() {
 function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
+*/
