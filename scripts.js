@@ -1327,7 +1327,7 @@ if(loops8 == 0){
 function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
-  const loop = matrix1sounds[index]; loops2[index]; loops3[index]; loops4[index]; loops5[index]; loops6[index]; loops7[index]; loops8[index]; loops9[index];
+  const loop = matrix1sounds[i]; loops2[index]; loops3[index]; loops4[index]; loops5[index]; loops6[index]; loops7[index]; loops8[index]; loops9[index];
  
 
   if (audioContext === null)
