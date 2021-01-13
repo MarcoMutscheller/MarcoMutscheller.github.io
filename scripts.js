@@ -72,63 +72,6 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
    this.source = null;
    this.analyser = null;
 }
-loadMatrix1() {
-    const decodeContext = new AudioContext();
-  
-    // laden von audio buffer MATRIX 1 
-    for (let i = 0; i < matrix1sounds.length; i++) {
-      const request = new XMLHttpRequest();
-      request.responseType = 'arraybuffer';
-      request.open('GET', matrix1sounds[i]);                                                     
-      decodeContext.decodeAudioData(request.response, (buffer) => {
-      const button = document.querySelector(`div.button[name="matrix1sounds"][value="${i}"]`);               
-                                                                                                                 
-      loops1[i] = new Loop(buffer, button, levels[i])
-                                                                                          
-        });
-      };
-  
-      request.send(); 
-    }
-
-    onButton(evt) {
-        const target = evt.target;
-        const index = target.dataset.index;
-        const loop = loops1[index];
-       
-      
-        if (audioContext === null)
-          audioContext = new AudioContext();
-      
-        if (loop) {
-          const time = audioContext.currentTime;
-          let syncLoopPhase = true;
-      
-          if (activeLoops.size === 0) {
-            loopStartTime = time;
-            syncLoopPhase = false;
-            window.requestAnimationFrame(displayIntensity);
-          }
-      
-          if (!loop.isPlaying) {
-            loop.start(time, syncLoopPhase);
-          } else {
-            loop.stop(time);
-          }
-        }
-      }
-      
-      displayIntensity() {
-        for (let loop of activeLoops)
-          loop.displayIntensity();
-         
-        if (activeLoops.size > 0)
-          window.requestAnimationFrame(displayIntensity);
-      }
-      
-      decibelToLinear(val) {
-        return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
-      }
 
      start(time, sync = true) {
     const buffer = this.buffer;
@@ -1256,10 +1199,27 @@ class Matrix2{
 
 //// global : button erzeugen und stopfunktionen
 
+function loadMatrix1() {
+    const decodeContext = new AudioContext();
+  
+    // laden von audio buffer MATRIX 1 
+    for (let i = 0; i < matrix1sounds.length; i++) {
+      const request = new XMLHttpRequest();
+      request.responseType = 'arraybuffer';
+      request.open('GET', matrix1sounds[i]);                                                     
+      decodeContext.decodeAudioData(request.response, (buffer) => {
+      const button = document.querySelector(`div.button[name="matrix1sounds"][value="${i}"]`);               
+                                                                                                                 
+      loops1[i] = new Loop(buffer, button, levels[i])
+                                                                                          
+        });
+      };
+  
+      request.send(); 
+    }
 
 
-
-  /*
+  
 function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
@@ -1298,4 +1258,3 @@ function displayIntensity() {
 function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
-*/
