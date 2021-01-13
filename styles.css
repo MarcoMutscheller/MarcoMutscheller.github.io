@@ -30,6 +30,17 @@ div.button {
   
 }
 
+div.trans {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  
+  opacity: 0.75;
+  
+}
+
 
 
 
@@ -188,68 +199,73 @@ div.button[data-index="26"] {
 
 
 
-div.button[data-index="27"] {
+div.trans[data-index="27"] {
   top: 151px;
   left: -300px;
   background-color: rgb(4, 32, 0);
 }
 
-div.button[data-index="28"] {
+div.trans[data-index="28"] {
   top: 252px;
   left: -400px;
    background-color: rgb(32, 32, 0);
 }
-div.button[data-index="29"] {
+div.trans[data-index="29"] {
   top: 353px;
   left: -500px;
    background-color: rgb(32, 32, 0);
 }
+
+
 div.button[data-index="30"] {
-  top: 454px;
-  left: -600px;
-   background-color: rgb(32, 32, 0);
+   top: 554px;
+  left: -700px;
+  background-color: rgb(255, 100, 0);
 }
-
-
 div.button[data-index="31"] {
-  top: 554px;
+   top: 554px;
   left: -600px;
   background-color: rgb(255, 100, 0);
 }
 
 div.button[data-index="32"] {
-  top: 654px;
+  top: 554px;
   left: -500px;
    background-color: rgb(255, 100, 0);
 }
 div.button[data-index="33"] {
-  top: 754px;
+  top: 554px;
   left: -400px;
    background-color: rgb(255, 100, 0);
 }
 div.button[data-index="34"] {
-  top: 854px;
+  top: 554px;
   left: -500px;
   background-color: rgb(255, 100, 0);;
 }
 div.button[data-index="35"] {
-  top: 1004px;
+  top: 554px;
   left: -600px;
   background-color: rgb(255, 100, 0);
 }
 
 div.button[data-index="36"] {
-  top: 704px;
+  top: 554px;
   left: -300px;
    background-color: rgb(255, 100, 0);
 }
 div.button[data-index="37"] {
-  top: 804px;
+  top: 554px;
   left: -200px;
    background-color: rgb(255, 100, 0);
 }
 div.button[data-index="38"] {
-  top: 904px;
+  top: 554px;
+  left: -300px;
+   background-color: rgb(255, 100, 0);
+}
+div.button[data-index="39"] {
+  top: 554px;
   left: -300px;
    background-color: rgb(255, 100, 0);
 }
@@ -260,7 +276,7 @@ div.button.active {
 
 /****************************************************/
 
-#fancy {
+button.fancy {
   width: 100px;
   height: 100px;
   background: red;
