@@ -170,7 +170,7 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
 
     request.send();
   }
-
+/*
     justplayone() {
 
         for (let i = 0; i < 8; i++){
@@ -185,7 +185,7 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
 
     }
 }
-}
+} */
 }
 
 class Matrix2{ 
@@ -299,7 +299,7 @@ class Matrix2{
     
         request.send();
       }
-    
+    /*
         justplayone() {
     
             for (let i = 0; i < 8; i++){
@@ -314,7 +314,7 @@ class Matrix2{
     
         }
     }
-    }
+    } */
     }
 
     class Matrix3{ 
@@ -419,7 +419,7 @@ class Matrix2{
           request.responseType = 'arraybuffer';
           request.open('GET', matrix3sounds[i]);                                                     
           decodeContext.decodeAudioData(request.response, (buffer) => {
-          const button = document.querySelector(`div.button[name="matrix3sounds"value="${i}"]`);               
+          const button = document.querySelector(`div.button[name="matrix3sounds" value="${i}"]`);               
                                                                                                                      
           loops3[i] = new Loop(buffer, button, levels[i])
                                                                                               
@@ -428,7 +428,7 @@ class Matrix2{
       
           request.send();
         }
-      
+      /*
           justplayone() {
       
               for (let i = 0; i < 8; i++){
@@ -443,7 +443,7 @@ class Matrix2{
       
           }
       }
-      }
+      }*/
       }
 
       class Uebergangdrums{ 
@@ -791,7 +791,7 @@ class Matrix2{
             
                
             }
-      
+      /*
             class MatrixNeu{ 
                 constructor(buffer, button, level = 0) {
                 
@@ -1048,7 +1048,7 @@ class Matrix2{
                         }
                     }
                     }
-                    }
+                }
 
                     class MatrixGuitar{ 
                         constructor(buffer, button, level = 0) {
@@ -1275,7 +1275,7 @@ class Matrix2{
                                 request.send();
                               }
                             }
-                        
+                      
  //hier gleiches für neue Matrizen
 
 
@@ -1323,7 +1323,7 @@ if(loops8 == 0){
   }
 
 }
-
+*/  
 function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
