@@ -171,21 +171,7 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
     }
 
 
-    justplayone() {
-
-        for (let i = 0; i < 8; i++){
-        loops1[i]= i;
-        if (loops1[i] > 0) {
-            loops1[i].stop;
-        
-         if (loops1[i] <= 0){
-            loops1[i].start;
-        }
-       
-
-    }
-}
-} 
+     
 }
 
 class Matrix2{ 
