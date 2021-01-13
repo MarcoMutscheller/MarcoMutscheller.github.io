@@ -60,7 +60,7 @@ loadMatrix1();
 /***************************************************************************/
 
 class Matrix1{ 
-constructor(buffer, button, level = 0) {
+constructor(buffer, matrix1sounds, loops1, button, level = 0, activeLoops) {
 
 const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
    const loops1 = [];
@@ -1223,7 +1223,7 @@ function loadMatrix1() {
 function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
-  const loop = loops1[index]; loops2[index]; loops3[index]; loops4[index]; loops5[index]; loops6[index]; loops7[index]; loops8[index]; loops9[index];
+  const loop = loops1[index]; 
  
 
   if (audioContext === null)
