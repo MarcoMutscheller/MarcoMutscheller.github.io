@@ -48,6 +48,7 @@ const loops6 = ["tranistion voc.wav"];
 const loops7 = ["11 pluck.wav", "12 pluck.wav", "13 pluck.wav", "21 pluck.wav", "22 pluck.wav", "23 pluck.wav", "31 pluck.wav", "32 pluck.wav", "33 pluck.wav"];
 const loops8 = ["bass low.wav", "bass high.wav"];
 const loops9 = ["guitar mid.wav", "guitar left.wav", "guitar right.wav", "guitar solo.wav"];
+
 const activeLoops = new Set();
 let loopStartTime = 0;
 const fadeTime = 0.050;
@@ -63,10 +64,10 @@ function loadMatrix1() {
     const decodeContext = new AudioContext();
   
     // laden von audio buffer MATRIX 1 
-    for (let i = 0; i < this.matrix1sounds.length; i++) {
+    for (let i = 0; i < matrix1sounds.length; i++) {
       const request = new XMLHttpRequest();
       request.responseType = 'arraybuffer';
-      request.open('GET', this.matrix1sounds[i]);                                                     
+      request.open('GET', matrix1sounds[i]);                                                     
       decodeContext.decodeAudioData(request.response, (buffer) => {
       const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
                                                                                                                  
@@ -78,8 +79,8 @@ function loadMatrix1() {
       request.send(); 
     }
 class Matrix1{ 
-constructor(matrix1sounds, buffer, button, level = 0) {
-this.matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+constructor(buffer, button, level = 0) {
+
    this.buffer = buffer;
    this.button = button;
    this.amp = decibelToLinear(level);
@@ -167,7 +168,24 @@ this.matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '2
     return (this.source !== null);
   }
   
+  loadMatrix1() {
+    const decodeContext = new AudioContext();
   
+    // laden von audio buffer MATRIX 1 
+    for (let i = 0; i < matrix1sounds.length; i++) {
+      const request = new XMLHttpRequest();
+      request.responseType = 'arraybuffer';
+      request.open('GET', matrix1sounds[i]);                                                     
+      decodeContext.decodeAudioData(request.response, (buffer) => {
+      const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
+                                                                                                                 
+      loops1[i] = new Loop(buffer, button, levels[i])
+                                                                                          
+        });
+      };
+  
+      request.send(); 
+    }
 }
 
 class Matrix2{ 
