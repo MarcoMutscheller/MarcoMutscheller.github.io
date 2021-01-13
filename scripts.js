@@ -20,7 +20,7 @@ function show(id) {
 
 
 
-/*****************************stop*******************************************/
+
 
 
 
@@ -55,7 +55,7 @@ const fadeTime = 0.050;
 window.addEventListener('mousedown', onButton);
 window.addEventListener('touchstart', onButton);
 
-loadLoops();
+loadMatrix1();
 
 /***************************************************************************/
 
