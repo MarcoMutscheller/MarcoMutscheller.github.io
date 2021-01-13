@@ -1208,9 +1208,9 @@ function loadMatrix1() {
       request.responseType = 'arraybuffer';
       request.open('GET', matrix1sounds[i]);                                                     
       decodeContext.decodeAudioData(request.response, (buffer) => {
-      const button = document.querySelector(`div.button[name="matrix1sounds"value="${i}"]`);               
+      const button = document.querySelector(`div.button[name="matrix1sounds" value="0"]`);               
                                                                                                                  
-      matrix1sounds[i] = new Loop(buffer, button, levels[i])
+      loops1[i] = new Loop(buffer, button, levels[i])
                                                                                           
         });
       };
