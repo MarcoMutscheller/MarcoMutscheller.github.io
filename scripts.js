@@ -155,10 +155,10 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
     const decodeContext = new AudioContext();
   
     // laden von audio buffer MATRIX 1 
-    for (let i = 0; i < matrix1sounds.length; i++) {
+    for (let i = 0; i < loops1.length; i++) {
       const request = new XMLHttpRequest();
       request.responseType = 'arraybuffer';
-      request.open('GET', matrix1sounds[i]);                                                     
+      request.open('GET', loops1[i]);                                                     
       decodeContext.decodeAudioData(request.response, (buffer) => {
       const button = document.querySelector(`div.button[name="matrix1sounds"][value="${i}"]`);               
                                                                                                                  
