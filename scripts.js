@@ -79,9 +79,6 @@ function loadMatrix1() {
 class Matrix1{ 
 constructor(buffer, button, level = 0) {
 
-   matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
-   loops1 = [];
-   activeLoops = new Set();
    this.buffer = buffer;
    this.button = button;
    this.amp = decibelToLinear(level);
