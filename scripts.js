@@ -60,7 +60,7 @@ loadMatrix1();
 /***************************************************************************/
 
 class Matrix1{ 
-constructor(buffer, matrix1sounds, loops1, button, level = 0, activeLoops) {
+constructor(buffer, button, level = 0) {
 
 const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
    const loops1 = [];
