@@ -159,7 +159,7 @@ const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '
       request.responseType = 'arraybuffer';
       request.open('GET', matrix1sounds[i]);                                                     
       decodeContext.decodeAudioData(request.response, (buffer) => {
-      const button = document.querySelector(`div.button[name="matrix1sounds"][value="${i}"]`);               
+      const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
                                                                                                                  
       loops1[i] = new Loop(buffer, button, levels[i])
                                                                                           
