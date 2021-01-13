@@ -28,7 +28,7 @@ function show(id) {
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 
-const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+
 const matrix2sounds = ['11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav'];
 const matrix3sounds = ['11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav'];
 const matrixneusounds = ["11 pluck.wav", "12 pluck.wav", "13 pluck.wav", "21 pluck.wav", "22 pluck.wav", "23 pluck.wav", "31 pluck.wav", "32 pluck.wav", "33 pluck.wav"];
@@ -38,7 +38,7 @@ const matrixdrumsounds = ["kick.wav", "snare.wav", "cymbals.wav"];
 const übergangdrums = ["tranistion drums.wav"];
 const übergangorc = ["tranistion orc.wav"];
 const übergangvocal = ["tranistion voc.wav"];
-const levels = [0, 0, -3, -10];
+
 const loops1 = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
 const loops2 = ['11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav'];
 const loops3 = ['11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav'];
@@ -51,6 +51,7 @@ const loops9 = ["guitar mid.wav", "guitar left.wav", "guitar right.wav", "guitar
 const activeLoops = new Set();
 let loopStartTime = 0;
 const fadeTime = 0.050;
+const levels = [0, 0, -3, -10];
 
 window.addEventListener('mousedown', onButton);
 window.addEventListener('touchstart', onButton);
@@ -62,10 +63,10 @@ function loadMatrix1() {
     const decodeContext = new AudioContext();
   
     // laden von audio buffer MATRIX 1 
-    for (let i = 0; i < matrix1sounds.length; i++) {
+    for (let i = 0; i < this.matrix1sounds.length; i++) {
       const request = new XMLHttpRequest();
       request.responseType = 'arraybuffer';
-      request.open('GET', matrix1sounds[i]);                                                     
+      request.open('GET', this.matrix1sounds[i]);                                                     
       decodeContext.decodeAudioData(request.response, (buffer) => {
       const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
                                                                                                                  
@@ -77,8 +78,8 @@ function loadMatrix1() {
       request.send(); 
     }
 class Matrix1{ 
-constructor(buffer, button, level = 0) {
-
+constructor(matrix1sounds, buffer, button, level = 0) {
+this.matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
    this.buffer = buffer;
    this.button = button;
    this.amp = decibelToLinear(level);
