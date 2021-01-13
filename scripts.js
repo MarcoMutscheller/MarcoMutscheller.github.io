@@ -39,7 +39,7 @@ const übergangdrums = ["tranistion drums.wav"];
 const übergangorc = ["tranistion orc.wav"];
 const übergangvocal = ["tranistion voc.wav"];
 const levels = [0, 0, -3, -10];
-const loops1 = [];
+const loops1 = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
 const loops2 = ['11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav'];
 const loops3 = ['11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav'];
 const loops4 = ["tranistion drums.wav"];
@@ -62,9 +62,8 @@ loadLoops();
 class Matrix1{ 
 constructor(buffer, button, level = 0) {
 
-const matrix1sounds = [];
+const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
    const loops1 = [];
-   const activeLoops = new Set();
    this.buffer = buffer;
    this.button = button;
    this.amp = decibelToLinear(level);
@@ -285,21 +284,7 @@ class Matrix2{
         request.send();
       }
 
-        justplayone() {
-    
-            for (let i = 0; i < 8; i++){
-            loops2[i]= i;
-            if (loops2[i] > 0) {
-                loops2[i].stop(time);
-            
-             if (loops2[i] <= 0){
-                loops2[i].start(time, syncLoopPhase);
-            }
-           
-    
-        }
-    }
-    } 
+        
     }
 
     class Matrix3{ 
@@ -414,21 +399,7 @@ class Matrix2{
           request.send();
         }
       
-          justplayone() {
-      
-              for (let i = 0; i < 8; i++){
-              loops3[i]= i;
-              if (loops3[i] > 0) {
-                  loops3[i].stop(time);
-              
-               if (loops3[i] <= 0){
-                  loops3[i].start(time, syncLoopPhase);
-              }
-             
-      
-          }
-      }
-      }
+         
       }
 
       class Uebergangdrums{ 
@@ -889,21 +860,7 @@ class Matrix2{
                     request.send();
                   }
                 
-                    justplayone() {
-                
-                        for (let i = 0; i < 8; i++){
-                        loops1[i]= i;
-                        if (loops7[i] > 0) {
-                            loops7[i].stop;
-                        
-                         if (loops7[i] <= 0){
-                            loops7[i].start;
-                        }
-                       
-                
-                    }
-                }
-                }
+                    
                 }
                 
                 class MatrixBass{ 
@@ -1018,21 +975,7 @@ class Matrix2{
                         request.send();
                       }
                     
-                        justplayone() {
-                    
-                            for (let i = 0; i < 8; i++){
-                            loops8[i]= i;
-                            if (loops8[i] > 0) {
-                                loops8[i].stop;
-                            
-                             if (loops8[i] <= 0){
-                                loops8[i].start;
-                            }
-                           
-                    
-                        }
-                    }
-                    }
+                      
                 }
 
                     class MatrixGuitar{ 
@@ -1276,40 +1219,6 @@ class Matrix2{
 
 
 
-function uebergang(){
-
-if(loops4 == 0){
-  matrix1sounds[i].stop(time);
-  if(loops4 < 0){
-    matrix1sounds[i].start(time, syncLoopPhase);
-
-  }
-}
-if(loops5 == 0){
-  matrix2sounds[i].stop(time);
-  if(loops5 < 0){
-    matrix2sounds[i].start(time, syncLoopPhase);
-  }
-}
-  if(loops6 == 0){
-    matrix3sounds[i].stop(time);
-    if(loops6 < 0){
-      matrix3sounds[i].start(time, syncLoopPhase);
-  
-    }
-  }
-
-}
-
-function bassnicht2mal(){
-if(loops8 == 0){
-    übergangorc[i].stop(time);
-    if(loops8 < 0){
-      übergangorc[i].start(time, syncLoopPhase);
-    }
-  }
-
-}
   
 function onButton(evt) {
   const target = evt.target;
