@@ -1204,8 +1204,8 @@ class Matrix2{
 
 function onButton(evt) {
   const target = evt.target;
-  const i = target.dataset.i;
-  const loop = matrix1sounds[i]; 
+  const index = target.dataset.index;
+  const loop = loops1[index]; 
  
 
   if (audioContext === null)
