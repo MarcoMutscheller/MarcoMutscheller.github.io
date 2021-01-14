@@ -28,7 +28,8 @@ function show(id) {
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 let audioContext = null;
 
-
+const matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+const loops1 = [];
 const matrix2sounds = ['11 afr.wav', '12 afr.wav', '13 afr.wav', '21 afr.wav', '22 afr.wav', '23 afr.wav', '31 afr.wav', '32 afr.wav', '33 afr.wav'];
 const matrix3sounds = ['11 solo synth.wav', '12 solo synth.wav', '13 solo synth.wav', '21 solo synth.wav', '22 solo synth.wav', '23 solo synth.wav', '31 solo synth.wav', '32 solo synth.wav', '33 solo synth.wav'];
 const matrixneusounds = ["11 pluck.wav", "12 pluck.wav", "13 pluck.wav", "21 pluck.wav", "22 pluck.wav", "23 pluck.wav", "31 pluck.wav", "32 pluck.wav", "33 pluck.wav"];
@@ -63,8 +64,7 @@ loadMatrix1();
 
 class Matrix1{ 
 constructor(buffer, button, level = 0) {
-   this.matrix1sounds = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
-   this.loops1 = ["11 swf.wav", '12 swf.wav', '13 swf.wav', '21 swf.wav', '22 swf.wav', '23 swf.wav', '31 swf.wav', '32 swf.wav', '33 swf.wav'];
+   
    this.buffer = buffer;
    this.button = button;
    this.amp = decibelToLinear(level);
