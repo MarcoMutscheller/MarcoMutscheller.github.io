@@ -64,7 +64,7 @@ loadMatrix1();
 
 class Matrix1{ 
 constructor(buffer, button, level = 0) {
-   
+ 
    this.buffer = buffer;
    this.button = button;
    this.amp = decibelToLinear(level);
@@ -1205,7 +1205,7 @@ class Matrix2{
 function onButton(evt) {
   const target = evt.target;
   const i = target.dataset.i;
-  const loop = loops1[i]; 
+  const loop = matrix1sounds[i]; 
  
 
   if (audioContext === null)
@@ -1245,7 +1245,7 @@ function loadMatrix1() {
   const decodeContext = new AudioContext();
 
   // laden von audio buffer MATRIX 1 
-  for (let i = 0; i < sounds.length; i++) {
+  for (let i = 0; i < matrix1sounds.length; i++) {
     const request = new XMLHttpRequest();
     request.responseType = 'arraybuffer';
     request.open('GET', matrix1sounds[i]);                                                     
