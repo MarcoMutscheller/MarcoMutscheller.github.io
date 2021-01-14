@@ -1219,7 +1219,7 @@ class Matrix2{
 
 //// global : button erzeugen und stopfunktionen
 
-onButton(evt) {
+function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
   const loop = loops1[index]; 
@@ -1246,7 +1246,7 @@ onButton(evt) {
   }
 }
 
-displayIntensity() {
+function displayIntensity() {
   for (let loop of activeLoops)
     loop.displayIntensity();
    
@@ -1254,6 +1254,6 @@ displayIntensity() {
     window.requestAnimationFrame(displayIntensity);
 }
 
-decibelToLinear(val) {
+function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
