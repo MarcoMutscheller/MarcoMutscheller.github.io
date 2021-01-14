@@ -1245,7 +1245,7 @@ function loadMatrix1() {
   const decodeContext = new AudioContext();
 
   // laden von audio buffer MATRIX 1 
-  for (let i = 0; i < matrix1sounds.length; i++) {
+  for (let i = 0; i < sounds.length; i++) {
     const request = new XMLHttpRequest();
     request.responseType = 'arraybuffer';
     request.open('GET', matrix1sounds[i]);                                                     
