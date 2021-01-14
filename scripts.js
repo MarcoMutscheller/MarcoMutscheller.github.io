@@ -136,6 +136,8 @@ class Matrix1 {
   get isPlaying() {
     return (this.source !== null);
   }
+
+
 }
 
 function loadLoops() {
@@ -163,7 +165,7 @@ function loadLoops() {
 function onButton(evt) {
   const target = evt.target;
   const index = target.dataset.index;
-  const loop = loops[index]; loops1[index];
+  const loop = loops[index]; 
  
 
   if (audioContext === null)
