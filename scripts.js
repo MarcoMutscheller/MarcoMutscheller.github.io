@@ -1204,7 +1204,7 @@ class Matrix2{
 
 function onButton(evt) {
   const target = evt.target;
-  const i = target.dataset.index;
+  const i = target.dataset.i;
   const loop = loops1[i]; 
  
 
@@ -1245,10 +1245,10 @@ function loadMatrix1() {
   const decodeContext = new AudioContext();
 
   // laden von audio buffer MATRIX 1 
-  for (let i = 0; i < loops1.length; i++) {
+  for (let i = 0; i < matrix1sounds.length; i++) {
     const request = new XMLHttpRequest();
     request.responseType = 'arraybuffer';
-    request.open('GET', loops1[i]);                                                     
+    request.open('GET', matrix1sounds[i]);                                                     
     decodeContext.decodeAudioData(request.response, (buffer) => {
     const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
                                                                                                                
