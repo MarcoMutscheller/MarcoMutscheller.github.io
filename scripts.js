@@ -152,24 +152,7 @@ constructor(buffer, button, level = 0) {
     return (this.source !== null);
   }
   
-  loadMatrix1() {
-    const decodeContext = new AudioContext();
-  
-    // laden von audio buffer MATRIX 1 
-    for (let i = 0; i < matrix1sounds.length; i++) {
-      const request = new XMLHttpRequest();
-      request.responseType = 'arraybuffer';
-      request.open('GET', matrix1sounds[i]);                                                     
-      decodeContext.decodeAudioData(request.response, (buffer) => {
-      const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
-                                                                                                                 
-      loops1[i] = new Loop(buffer, button, levels[i])
-                                                                                          
-        });
-      };
-  
-      request.send(); 
-    }
+ 
     
   }
 
@@ -1257,3 +1240,22 @@ function displayIntensity() {
 function decibelToLinear(val) {
   return Math.exp(0.11512925464970229 * val); // pow(10, val / 20)
 }
+
+function loadMatrix1() {
+  const decodeContext = new AudioContext();
+
+  // laden von audio buffer MATRIX 1 
+  for (let i = 0; i < matrix1sounds.length; i++) {
+    const request = new XMLHttpRequest();
+    request.responseType = 'arraybuffer';
+    request.open('GET', matrix1sounds[i]);                                                     
+    decodeContext.decodeAudioData(request.response, (buffer) => {
+    const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
+                                                                                                               
+    loops1[i] = new Loop(buffer, button, levels[i])
+                                                                                        
+      });
+    };
+
+    request.send(); 
+  }
