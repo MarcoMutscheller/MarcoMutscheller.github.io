@@ -34,7 +34,6 @@ const loops = [];
 const activeLoops = new Set();
 let loopStartTime = 0;
 const fadeTime = 0.050;
-
 window.addEventListener('mousedown', onButton);
 window.addEventListener('touchstart', onButton);
 
@@ -43,7 +42,7 @@ loadLoops();
 /***************************************************************************/
 
 
-class Matrix1 {
+class Loop {
     constructor(buffer, button, level = 0) {
     this.buffer = buffer;
     this.button = button;
@@ -149,7 +148,7 @@ function loadLoops() {
     request.responseType = 'arraybuffer';
     request.open('GET', sounds[i]);                                                     
     decodeContext.decodeAudioData(request.response, (buffer) => {
-    const button = document.querySelector(`div.button[data-index="${i}"]`);               
+    const button = document.querySelector(`div.button[name="matrix1sounds" value="${i}"]`);               
                                                                                                                
     loops[i] = new Loop(buffer, button, levels[i])
                                                                                         
