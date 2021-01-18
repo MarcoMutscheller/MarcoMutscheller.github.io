@@ -53,9 +53,7 @@ class Loop {
   
 } 
 
-
-    
-  start(time, sync = true) {
+start(time, sync = true) {
     const buffer = this.buffer;
     let analyser = this.analyser;
     let offset = 0;
