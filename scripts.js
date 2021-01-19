@@ -30,7 +30,7 @@ let audioContext = null;
 
 const sounds = ["11 swf.wav"];
 const levels = [0, 0, -3, -10];
-const loops = [];
+const loops = ["11 swf.wav"];
 const activeLoops = new Set();
 let loopStartTime = 0;
 const fadeTime = 0.050;
