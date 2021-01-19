@@ -45,12 +45,12 @@ div.trans {
 
 
 
-div.button[data-index="0"] {
+div.button[name="matrix1sounds"][value="0"] {
   top: -150px;
   left: -200px;
   background-color: green;
 }
-div.button[[data-index="1"] {
+div.button[name="matrix1sounds"][value="1"] {
   top: -150px;
   left: -99px;
   background-color: green;
