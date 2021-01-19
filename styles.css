@@ -30,22 +30,12 @@ div.button {
   
 }
 
-div.trans {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  margin-top: -50px;
-  margin-left: -50px;
-  
-  opacity: 0.75;
-  
-}
 
 
 
 
 
-div.buttons[data-index="0"] {
+div.button[data-index="0"] {
   top: -150px;
   left: -200px;
   background-color: green;
