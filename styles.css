@@ -31,6 +31,16 @@ div.button {
 }
 
 
+div.trans {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  margin-top: -50px;
+  margin-left: -50px;
+  
+  opacity: 0.75;
+  
+}
 
 
 
