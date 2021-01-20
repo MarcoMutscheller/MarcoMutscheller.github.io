@@ -44,9 +44,10 @@ function show(id) {
   }
 }
 
-$(window).on('load', function() {
-  $('button.fancy').delay(100).fadeIn()
-})
+setTimeout(function(){
+  $('button.fancy').fadeIn(3000);  
+}, 3000);
+
 
 
 /*****************************stop*******************************************/
