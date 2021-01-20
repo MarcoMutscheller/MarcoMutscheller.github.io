@@ -341,6 +341,30 @@ button.fancy {
   to {top: 200px; background-color: blue; color: rgb(255, 255, 255);}
 }
 
+button.uebergang {
+ 
+
+  width: 100px;
+  height: 100px;
+  left: 150px;
+  border: none;
+  border-radius: none;
+  background: rgb(0, 0, 0);
+  position: relative;
+  animation-name: example2;
+  animation-duration: 3s;  
+  animation-fill-mode: forwards;
+  animation-delay: 30000ms;
+  color: rgb(0, 0, 0);
+  
+}
+
+
+@keyframes example2 {
+  from {top: 0px;}
+  to {top: 49px; background-color: rgb(104, 0, 57); color: rgb(255, 255, 255);}
+}
+
 
 
 
