@@ -219,14 +219,14 @@ div.button[name="nextmatrix"][value="0"] {
   background-color: rgb(255, 100, 0);
 }
 div.button[name="nextmatrix"][value="1"] {
-   top: 454px;
-  left: -400px;
+   top: 455px;
+  left: -401px;
   background-color: rgb(255, 100, 0);
 }
 
 div.button[name="nextmatrix"][value="2"] {
-  top: 454px;
-  left: -300px;
+  top: 456px;
+  left: -301px;
    background-color: rgb(255, 100, 0);
 }
 div.button[name="nextmatrix"][value="3"] {
@@ -235,13 +235,13 @@ div.button[name="nextmatrix"][value="3"] {
    background-color: rgb(255, 100, 0);
 }
 div.button[name="nextmatrix"][value="4"] {
-  top: 554px;
-  left: -400px;
+  top: 555px;
+  left: -401px;
   background-color: rgb(255, 100, 0);;
 }
 div.button[name="nextmatrix"][value="5"] {
-  top: 554px;
-  left: -300px;
+  top: 556px;
+  left: -301px;
   background-color: rgb(255, 100, 0);
 }
 
@@ -251,24 +251,24 @@ div.button[name="nextmatrix"][value="6"] {
    background-color: rgb(255, 100, 0);
 }
 div.button[name="nextmatrix"][value="7"] {
-  top: 654px;
-  left: -400px;
+  top: 655px;
+  left: -401px;
    background-color: rgb(255, 100, 0);
 }
 div.button[name="nextmatrix"][value="8"] {
-  top: 654px;
-  left: -300px;
+  top: 656px;
+  left: -301px;
    background-color: rgb(255, 100, 0);
 }
 
 /*******************************************************************/
 
-div.button[name="basses"][value="0"] {
+div.button[name="bass"][value="0"] {
   top: 754px;
  left: -700px;
  background-color: rgb(0, 204, 255);
 }
-div.button[name="basses"][value="1"] {
+div.button[name="bass"][value="1"] {
   top: 754px;
  left: -600px;
  background-color: rgb(0, 132, 165);
