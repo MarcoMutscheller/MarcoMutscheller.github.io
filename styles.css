@@ -213,49 +213,49 @@ div.button[name="übergangvocal"][value="0"] {
 
 /*******************************************************************/
 
-div.button[name="matrixneusounds"][value="0"] {
+div.button[name="nextmatrix"][value="0"] {
    top: 554px;
   left: -700px;
   background-color: rgb(255, 100, 0);
 }
-div.button[name="matrixneusounds"][value="1"] {
+div.button[name="nextmatrix"][value="1"] {
    top: 554px;
   left: -600px;
   background-color: rgb(255, 100, 0);
 }
 
-div.button[name="matrixneusounds"][value="2"] {
+div.button[name="nextmatrix"][value="2"] {
   top: 554px;
   left: -500px;
    background-color: rgb(255, 100, 0);
 }
-div.button[name="matrixneusounds"][value="3"] {
+div.button[name="nextmatrix"][value="3"] {
   top: 554px;
   left: -400px;
    background-color: rgb(255, 100, 0);
 }
-div.button[name="matrixneusounds"][value="4"] {
+div.button[name="nextmatrix"][value="4"] {
   top: 554px;
   left: -500px;
   background-color: rgb(255, 100, 0);;
 }
-div.button[name="matrixneusounds"][value="5"] {
+div.button[name="nextmatrix"][value="5"] {
   top: 554px;
   left: -600px;
   background-color: rgb(255, 100, 0);
 }
 
-div.button[name="matrixneusounds"][value="6"] {
+div.button[name="nextmatrix"][value="6"] {
   top: 554px;
   left: -300px;
    background-color: rgb(255, 100, 0);
 }
-div.button[name="matrixneusounds"][value="7"] {
+div.button[name="nextmatrix"][value="7"] {
   top: 554px;
   left: -200px;
    background-color: rgb(255, 100, 0);
 }
-div.button[name="matrixneusounds"][value="8"] {
+div.button[name="nextmatrix"][value="8"] {
   top: 554px;
   left: -300px;
    background-color: rgb(255, 100, 0);
