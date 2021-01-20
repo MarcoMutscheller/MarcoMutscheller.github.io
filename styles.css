@@ -216,49 +216,49 @@ div.button[name="übergangvocal"][value="2"] {
 div.button[name="nextmatrix"][value="0"] {
    top: 454px;
    left: -800px;
-  background-color: rgb(255, 100, 0);
+  background-color: rgb(173, 69, 0);
 }
 div.button[name="nextmatrix"][value="1"] {
    top: 454px;
    left: -699px;
-  background-color: rgb(255, 100, 0);
+  background-color: rgb(136, 54, 0);
 }
 
 div.button[name="nextmatrix"][value="2"] {
   top: 454px;
   left: -598px;
-   background-color: rgb(255, 100, 0);
+   background-color: rgb(73, 30, 1);
 }
 div.button[name="nextmatrix"][value="3"] {
   top: 555px;
   left: -800px;
-   background-color: rgb(255, 100, 0);
+  background-color: rgb(173, 69, 0);
 }
 div.button[name="nextmatrix"][value="4"] {
   top: 555px;
   left: -699px;
-  background-color: rgb(255, 100, 0);;
+  background-color: rgb(136, 54, 0);
 }
 div.button[name="nextmatrix"][value="5"] {
   top: 555px;
   left: -598px;
-  background-color: rgb(255, 100, 0);
+  background-color: rgb(73, 30, 1);
 }
 
 div.button[name="nextmatrix"][value="6"] {
   top: 656px;
   left: -800px;
-   background-color: rgb(255, 100, 0);
+  background-color: rgb(173, 69, 0);
 }
 div.button[name="nextmatrix"][value="7"] {
   top: 656px;
   left: -699px;
-   background-color: rgb(255, 100, 0);
+  background-color: rgb(136, 54, 0);
 }
 div.button[name="nextmatrix"][value="8"] {
   top: 656px;
   left: -598px;
-   background-color: rgb(255, 100, 0);
+  background-color: rgb(73, 30, 1);
 }
 
 /*******************************************************************/
@@ -292,6 +292,27 @@ div.button[name="drums"][value="2"] {
  background-color: rgba(59, 0, 0, 0.87);
 }
 
+/****************************************************/
+div.button[name="guitar"][value="0"] {
+  top: 554px;
+ left: -199px;
+ background-color: rgba(7, 0, 73, 0.87);
+}
+div.button[name="guitar"][value="1"] {
+  top: 554px;
+ left: -99px;
+ background-color: rgba(0, 63, 92, 0.87);
+}
+div.button[name="guitar"][value="2"] {
+  top: 554px;
+ left: -1px;
+ background-color: rgba(0, 63, 92, 0.87);
+}
+div.button[name="guitar"][value="3"] {
+  top: 554px;
+ left: -1px;
+ background-color: rgba(4, 0, 37, 0.87);
+}
 /****************************************************/
 div.button.active {
   opacity: 1;

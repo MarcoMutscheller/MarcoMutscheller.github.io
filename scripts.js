@@ -36,6 +36,14 @@ function show(id) {
   }
 }
 
+function show(id) {
+  if(document.getElementById) {
+      var guitar = document.getElementById(id);
+      document.getElementById("guitar").style.visibility='visible';
+      guitar.style.display = (guitar.style.display=='block'?'none':'block');
+  }
+}
+
 
 /*****************************stop*******************************************/
 
