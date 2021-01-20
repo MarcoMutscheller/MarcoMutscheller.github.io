@@ -321,8 +321,10 @@ div.button.active {
 button.fancy {
  
 
-  width: 98px;
+  width: 100px;
   height: 100px;
+  border: none;
+  border-radius: none;
   background: rgb(0, 0, 0);
   position: relative;
   animation-name: example;
