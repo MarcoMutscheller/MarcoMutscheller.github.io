@@ -317,7 +317,11 @@ div.button[name="guitar"][value="3"] {
 div.button.active {
   opacity: 1;
 }
+
+
 button.fancy {
+  opacity: 0;
+  transition: opacity 0.5s;
   width: 100px;
   height: 100px;
   background: red;
@@ -325,7 +329,8 @@ button.fancy {
   animation-name: example;
   animation-duration: 3s;  
   animation-fill-mode: forwards;
-  animation-delay: 45000ms;
+  animation-delay: 25000ms;
+  
   color: white;
 }
 

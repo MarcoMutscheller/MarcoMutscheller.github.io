@@ -44,6 +44,9 @@ function show(id) {
   }
 }
 
+setTimeout(function(){
+  $('button.fancy').css({'opacity':'1'})
+}, 25000);
 
 /*****************************stop*******************************************/
 
