@@ -328,8 +328,7 @@ button.fancy {
   animation-name: example;
   animation-duration: 3s;  
   animation-fill-mode: forwards;
-  animation-delay: 25000ms;
-  
+  animation-delay: 20000ms;
   color: white;
 }
 
