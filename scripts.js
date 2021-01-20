@@ -28,6 +28,14 @@ function show(id) {
   }
 }
 
+function show(id) {
+  if(document.getElementById) {
+      var drums = document.getElementById(id);
+      document.getElementById("drums").style.visibility='visible';
+      drums.style.display = (drums.style.display=='block'?'none':'block');
+  }
+}
+
 
 /*****************************stop*******************************************/
 
