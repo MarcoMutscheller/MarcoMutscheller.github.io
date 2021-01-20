@@ -320,7 +320,7 @@ div.button.active {
 
 button.fancy {
  
-
+display: none;
   width: 98px;
   height: 100px;
   background: red;
@@ -330,7 +330,7 @@ button.fancy {
   animation-fill-mode: forwards;
   animation-delay: 20000ms;
   color: white;
-  display: none;
+  
 }
 
 
