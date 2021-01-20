@@ -318,10 +318,9 @@ div.button.active {
   opacity: 1;
 }
 
-
 button.fancy {
-  display: none;
-  width: 100px;
+  
+  width: 98px;
   height: 100px;
   background: red;
   position: relative;
