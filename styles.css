@@ -197,18 +197,18 @@ div.button[name="matrix3sounds"][value="8"] {
 div.button[name="übergangdrums"][value="0"] {
   top: 151px;
   left: -300px;
-  background-color: rgb(4, 32, 0);
+  background-color: rgb(87, 0, 0);
 }
 
-div.button[name="übergangorc"][value="0"] {
+div.button[name="übergangorc"][value="1"] {
   top: 252px;
   left: -400px;
-   background-color: rgb(32, 32, 0);
+   background-color: rgb(0, 128, 0);
 }
-div.button[name="übergangvocal"][value="0"] {
+div.button[name="übergangvocal"][value="2"] {
   top: 353px;
   left: -500px;
-   background-color: rgb(32, 32, 0);
+   background-color: rgb(167, 167, 0);
 }
 
 /*******************************************************************/
@@ -261,6 +261,18 @@ div.button[name="nextmatrix"][value="8"] {
    background-color: rgb(255, 100, 0);
 }
 
+/*******************************************************************/
+
+div.button[name="basses"][value="0"] {
+  top: 554px;
+ left: -700px;
+ background-color: rgb(255, 100, 0);
+}
+div.button[name="basses"][value="1"] {
+  top: 554px;
+ left: -600px;
+ background-color: rgb(255, 100, 0);
+}
 
 div.button.active {
   opacity: 1;

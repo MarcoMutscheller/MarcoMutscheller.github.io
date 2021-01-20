@@ -2,11 +2,13 @@
 function show(id) {
     if(document.getElementById) {
         var next1 = document.getElementById(id);
+        document.getElementById("next1").style.visibility='visible';
         next1.style.display = (next1.style.display=='block'?'none':'block');
     }
 }function show(id) {
     if(document.getElementById) {
         var interactbutton = document.getElementById(id);
+        document.getElementById("interactbutton").style.visibility='visible';
         interactbutton.style.display = (interactbutton.style.display=='block'?'none':'block');
     }
 }
@@ -20,9 +22,9 @@ function show(id) {
 
 function show(id) {
   if(document.getElementById) {
-      var rollo = document.getElementById(id);
-      document.getElementById("drums").style.visibility='visible';
-      drums.style.display = (drums.style.display=='block'?'none':'block');
+      var basses = document.getElementById(id);
+      document.getElementById("basses").style.visibility='visible';
+      basses.style.display = (basses.style.display=='block'?'none':'block');
   }
 }
 
