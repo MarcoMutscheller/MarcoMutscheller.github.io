@@ -330,6 +330,7 @@ button.fancy {
   animation-fill-mode: forwards;
   animation-delay: 20000ms;
   color: white;
+  display: none;
 }
 
 
