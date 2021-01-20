@@ -320,8 +320,7 @@ div.button.active {
 
 
 button.fancy {
-  opacity: 0;
-  transition: opacity 0.5s;
+  display: none;
   width: 100px;
   height: 100px;
   background: red;
