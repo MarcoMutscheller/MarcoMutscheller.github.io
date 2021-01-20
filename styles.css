@@ -276,17 +276,17 @@ div.button[name="bass"][value="1"] {
 
 
 /****************************************************/
-div.button[name="drums"][value="0"] {
+div.button[name="drums"][value="1"] {
   top: 554px;
- left: -100px;
+ left: -101px;
  background-color: rgba(194, 0, 0, 0.87);
 }
-div.button[name="drums"][value="1"] {
+div.button[name="drums"][value="2"] {
   top: 554px;
  left: -1px;
  background-color: rgba(119, 0, 0, 0.87);
 }
-div.button[name="drums"][value="2"] {
+div.button[name="drums"][value="3"] {
   top: 554px;
  left: 100;
  background-color: rgb(99, 0, 0);
