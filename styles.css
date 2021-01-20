@@ -283,12 +283,12 @@ div.button[name="drums"][value="1"] {
 }
 div.button[name="drums"][value="2"] {
   top: 554px;
- left: -1px;
+ left: 0px;
  background-color: rgba(119, 0, 0, 0.87);
 }
 div.button[name="drums"][value="3"] {
   top: 554px;
- left: 100;
+ left: 100px;
  background-color: rgb(99, 0, 0);
 }
 
@@ -361,7 +361,7 @@ button.fancy {
 
 @keyframes example2 {
   from {top: 0px;}
-  to {top: 100px; left: 650px; position: static; background-color: rgb(104, 0, 57); color: rgb(255, 255, 255);}
+  to {top: 100px; left: -500px; position: static; background-color: rgb(104, 0, 57); color: rgb(255, 255, 255);}
 }
 
 
