@@ -44,9 +44,9 @@ function show(id) {
   }
 }
 
-setTimeout(function(){
-  $('button.fancy').css({'opacity':'1'})
-}, 25000);
+$(window).on('load', function() {
+  $('button.fancy').delay(2000).fadeIn()
+})
 
 /*****************************stop*******************************************/
 
