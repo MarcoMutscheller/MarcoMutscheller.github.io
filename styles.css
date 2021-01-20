@@ -320,6 +320,7 @@ div.button.active {
 
 button.fancy {
  
+  display: none;
   width: 98px;
   height: 100px;
   background: red;

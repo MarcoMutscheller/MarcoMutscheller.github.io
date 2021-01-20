@@ -44,7 +44,9 @@ function show(id) {
   }
 }
 
-
+$(window).on('load', function() {
+  $('button.fancy').delay(100).fadeIn()
+})
 
 
 /*****************************stop*******************************************/
