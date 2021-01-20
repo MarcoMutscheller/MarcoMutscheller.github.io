@@ -44,9 +44,7 @@ function show(id) {
   }
 }
 
-setTimeout(function(){
-  $('button.fancy').fadeIn(3000);  
-}, 3000);
+
 
 
 
