@@ -294,23 +294,23 @@ div.button[name="drums"][value="2"] {
 
 /****************************************************/
 div.button[name="guitar"][value="0"] {
-  top: 554px;
- left: -199px;
+  top: 454px;
+  left: 401px;
  background-color: rgba(7, 0, 73, 0.87);
 }
 div.button[name="guitar"][value="1"] {
   top: 554px;
- left: -99px;
+  left: 300px;
  background-color: rgba(0, 63, 92, 0.87);
 }
 div.button[name="guitar"][value="2"] {
   top: 554px;
- left: -1px;
+  left: 500px;
  background-color: rgba(0, 63, 92, 0.87);
 }
 div.button[name="guitar"][value="3"] {
-  top: 554px;
- left: -1px;
+  top: 555px;
+  left: 401px;
  background-color: rgba(4, 0, 37, 0.87);
 }
 /****************************************************/
