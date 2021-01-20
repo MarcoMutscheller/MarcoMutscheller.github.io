@@ -30,9 +30,9 @@ function show(id) {
 
 function show(id) {
   if(document.getElementById) {
-      var drums = document.getElementById(id);
-      document.getElementById("drums").style.visibility='visible';
-      drums.style.display = (drums.style.display=='block'?'none':'block');
+      var drummer = document.getElementById(id);
+      document.getElementById("drummer").style.visibility='visible';
+      drummer.style.display = (drummer.style.display=='block'?'none':'block');
   }
 }
 
