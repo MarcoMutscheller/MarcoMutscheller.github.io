@@ -323,20 +323,20 @@ button.fancy {
 
   width: 98px;
   height: 100px;
-  background: red;
+  background: rgb(0, 0, 0);
   position: relative;
   animation-name: example;
   animation-duration: 3s;  
   animation-fill-mode: forwards;
   animation-delay: 20000ms;
-  color: white;
+  color: rgb(0, 0, 0);
   
 }
 
 
 @keyframes example {
   from {top: 0px;}
-  to {top: 200px; background-color: blue;}
+  to {top: 200px; background-color: blue; color: rgb(255, 255, 255);}
 }
 
 
