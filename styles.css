@@ -278,7 +278,7 @@ div.button[name="bass"][value="1"] {
 /****************************************************/
 div.button[name="drums"][value="0"] {
   top: 554px;
- left: -99px;
+ left: -100px;
  background-color: rgba(194, 0, 0, 0.87);
 }
 div.button[name="drums"][value="1"] {
