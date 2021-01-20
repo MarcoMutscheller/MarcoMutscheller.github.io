@@ -341,12 +341,12 @@ button.fancy {
   to {top: 200px; background-color: blue; color: rgb(255, 255, 255);}
 }
 
-button.uebergang {
+.uebergang {
  
 
   width: 100px;
   height: 100px;
-  left: 150px;
+  left: 650px;
   border: none;
   border-radius: none;
   background: rgb(0, 0, 0);
