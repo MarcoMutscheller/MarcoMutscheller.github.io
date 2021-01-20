@@ -346,13 +346,12 @@ button.fancy {
 
   width: 100px;
   height: 100px;
-  left: 650px;
   border: none;
   border-radius: none;
   background: rgb(0, 0, 0);
-  
+  position: relative;
   animation-name: example2;
-  animation-duration: 3s;  
+  animation-duration: 4s;  
   animation-fill-mode: forwards;
   animation-delay: 30000ms;
   color: rgb(0, 0, 0);
@@ -362,7 +361,7 @@ button.fancy {
 
 @keyframes example2 {
   from {top: 0px;}
-  to {top: 100px; left: 650px; background-color: rgb(104, 0, 57); color: rgb(255, 255, 255);}
+  to {top: 100px; left: 650px; position: static; background-color: rgb(104, 0, 57); color: rgb(255, 255, 255);}
 }
 
 
