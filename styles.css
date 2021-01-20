@@ -362,7 +362,7 @@ button.fancy {
 
 @keyframes example2 {
   from {top: 0px;}
-  to {top: 49px; background-color: rgb(104, 0, 57); color: rgb(255, 255, 255);}
+  to {top: 49px; left: 650px; background-color: rgb(104, 0, 57); color: rgb(255, 255, 255);}
 }
 
 
