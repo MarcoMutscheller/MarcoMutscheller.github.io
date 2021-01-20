@@ -278,17 +278,17 @@ div.button[name="bass"][value="1"] {
 /****************************************************/
 div.button[name="drums"][value="0"] {
   top: 554px;
- left: -199px;
+ left: -99px;
  background-color: rgba(145, 0, 0, 0.87);
 }
 div.button[name="drums"][value="1"] {
   top: 554px;
- left: -99px;
+ left: -1px;
  background-color: rgba(85, 0, 0, 0.87);
 }
 div.button[name="drums"][value="2"] {
   top: 554px;
- left: -1px;
+ left: -101;
  background-color: rgba(39, 0, 0, 0.87);
 }
 
@@ -309,7 +309,7 @@ div.button[name="guitar"][value="2"] {
  background-color: rgba(0, 63, 92, 0.87);
 }
 div.button[name="guitar"][value="3"] {
-  top: 555px;
+  top: 655px;
   left: 401px;
  background-color: rgba(4, 0, 37, 0.87);
 }
