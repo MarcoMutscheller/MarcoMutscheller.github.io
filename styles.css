@@ -319,7 +319,7 @@ div.button.active {
 }
 
 button.fancy {
-  display: none;
+ 
   width: 98px;
   height: 100px;
   background: red;
@@ -331,18 +331,6 @@ button.fancy {
   color: white;
 }
 
-button.fancy1 {
-  display: none;
-  width: 98px;
-  height: 100px;
-  background: red;
-  position: relative;
-  animation-name: example;
-  animation-duration: 3s;  
-  animation-fill-mode: forwards;
-  animation-delay: 20000ms;
-  color: white;
-}
 
 @keyframes example {
   from {top: 0px;}
